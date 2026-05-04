@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>مؤسسة معتز الشمري للمقاولات | Mutaz Alshammari Contracting</title>
+
+  <meta name="description" content="مؤسسة معتز الشمري للمقاولات تقدم خدمات المقاولات العامة، الإنشاءات، البنية التحتية، الطرق، الجسور، التشطيبات، الأعمال الكهروميكانيكية، والتطوير العقاري في المملكة العربية السعودية." />
+  <meta name="keywords" content="مؤسسة معتز الشمري, مقاولات عامة, إنشاءات, بنية تحتية, طرق, جسور, تشطيبات, تطوير عقاري, Mutaz Alshammari Contracting" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#001F41" />
+
+  <meta property="og:title" content="مؤسسة معتز الشمري للمقاولات" />
+  <meta property="og:description" content="خدمات مقاولات عامة وإنشاءات وبنية تحتية وتشطيبات وتطوير عقاري." />
+  <meta property="og:image" content="favicon.webp" />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" href="favicon.webp" type="image/webp" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy: #001F41;
+      --navy-2: #062B55;
+      --gold: #C19A5B;
+      --gold-dark: #A8854A;
+      --concrete: #F4F5F7;
+      --text: #1F2937;
+      --muted: #6B7280;
+      --white: #FFFFFF;
+      --border: #E5E7EB;
+      --shadow: 0 16px 40px rgba(0, 31, 65, 0.08);
+      --radius: 24px;
+    }
+    .social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 8px 12px;
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: 12px;
+  color: #D1D5DB;
+  font-size: 13px;
+  font-weight: 800;
+  transition: 0.2s ease;
+}
+
+.social-links a:hover {
+  color: white;
+  border-color: var(--gold);
+  background: rgba(193, 154, 91, 0.12);
+}
+
+.social-links span {
+  width: 22px;
+  height: 22px;
+  border-radius: 7px;
+  background: rgba(193, 154, 91, 0.14);
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 900;
+  line-height: 1;
+}
+
+.disabled-social {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Cairo", sans-serif;
+      background: var(--concrete);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    section {
+      scroll-margin-top: 90px;
+    }
+
+    .container {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .site-header {
+      position: fixed;
+      inset-inline: 0;
+      top: 0;
+      z-index: 1000;
+      background: var(--navy);
+      color: white;
+      transition: 0.25s ease;
+    }
+
+    .site-header.scrolled {
+      background: rgba(255, 255, 255, 0.96);
+      color: var(--navy);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(12px);
+    }
+
+    .navbar {
+      height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 220px;
+    }
+
+    .brand-logo {
+      width: 58px;
+      height: 58px;
+      border-radius: 14px;
+      background: white;
+      border: 1px solid var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      padding: 5px;
+      flex: 0 0 auto;
+    }
+
+    .brand-title {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.2;
+    }
+
+    .brand-subtitle {
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 14px;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.9);
+      transition: 0.2s;
+    }
+
+    .site-header.scrolled .nav-link {
+      color: var(--text);
+    }
+
+    .nav-link:hover {
+      color: var(--gold);
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .lang-btn,
+    .menu-btn {
+      border: 0;
+      background: transparent;
+      color: inherit;
+      cursor: pointer;
+      font-family: inherit;
+      font-weight: 900;
+    }
+
+    .lang-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      border-radius: 14px;
+      padding: 12px 22px;
+      font-weight: 900;
+      transition: 0.2s ease;
+      border: 1px solid transparent;
+      cursor: pointer;
+      font-family: inherit;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: white;
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      color: white;
+      border-color: rgba(255, 255, 255, 0.8);
+    }
+
+    .btn-outline:hover {
+      background: white;
+      color: var(--navy);
+    }
+
+    .menu-btn {
+      display: none;
+      font-size: 30px;
+      line-height: 1;
+    }
+
+    .mobile-menu {
+      display: none;
+      background: white;
+      color: var(--text);
+      border-top: 1px solid var(--border);
+      box-shadow: 0 20px 30px rgba(0,0,0,0.08);
+    }
+
+    .mobile-menu.active {
+      display: block;
+    }
+
+    .mobile-menu-inner {
+      width: min(1180px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 14px 0 18px;
+    }
+
+    .mobile-menu a {
+      display: block;
+      padding: 13px 0;
+      border-bottom: 1px solid #F1F1F1;
+      font-weight: 800;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: var(--navy);
+      color: white;
+      padding: 160px 0 80px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.2;
+      background-image:
+        linear-gradient(45deg, rgba(255,255,255,0.06) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,0.06) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.06) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.06) 75%);
+      background-size: 42px 42px;
+      background-position: 0 0, 0 21px, 21px -21px, -21px 0;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      border-radius: 50%;
+      background: rgba(193, 154, 91, 0.16);
+      filter: blur(60px);
+      inset-inline-end: -160px;
+      top: 100px;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: var(--gold);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 14px;
+      font-weight: 900;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: clamp(38px, 5vw, 66px);
+      line-height: 1.18;
+      font-weight: 900;
+      margin-bottom: 24px;
+      max-width: 760px;
+    }
+
+    .hero p {
+      color: #D1D5DB;
+      font-size: 20px;
+      max-width: 720px;
+      margin-bottom: 34px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .hero-logo-card {
+      background: rgba(255,255,255,0.96);
+      border-radius: 34px;
+      padding: 44px;
+      box-shadow: 0 30px 80px rgba(0,0,0,0.25);
+      border: 1px solid rgba(255,255,255,0.4);
+    }
+
+    .stats {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 50px;
+    }
+
+    .stat-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      padding: 20px;
+      backdrop-filter: blur(8px);
+    }
+
+    .stat-value {
+      font-size: 26px;
+      font-weight: 900;
+      color: white;
+      direction: ltr;
+    }
+
+    .stat-label {
+      color: #D1D5DB;
+      font-size: 14px;
+      font-weight: 800;
+    }
+
+    .section {
+      padding: 88px 0;
+    }
+
+    .bg-white {
+      background: white;
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .section-heading h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      color: var(--navy);
+      font-weight: 900;
+      margin-bottom: 14px;
+    }
+
+    .section-heading p {
+      color: var(--muted);
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .section-line {
+      width: 80px;
+      height: 4px;
+      border-radius: 999px;
+      background: var(--gold);
+      margin: 22px auto 0;
+    }
+
+    .about-grid,
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px;
+    }
+
+    .why-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.03);
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      box-shadow: var(--shadow);
+      transform: translateY(-3px);
+    }
+
+    .about-card {
+      background: var(--concrete);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-card::before {
+      content: "";
+      position: absolute;
+      inset-block: 0;
+      inset-inline-start: 0;
+      width: 6px;
+      background: var(--gold);
+    }
+
+    .about-card:nth-child(2)::before {
+      background: var(--navy);
+    }
+
+    .icon-box {
+      width: 64px;
+      height: 64px;
+      border-radius: 18px;
+      background: rgba(0, 31, 65, 0.06);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 22px;
+      font-size: 30px;
+    }
+
+    .card h3 {
+      color: var(--navy);
+      font-size: 22px;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .card p {
+      color: var(--muted);
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      min-height: 280px;
+    }
+
+    .sectors-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .sector-card {
+      position: relative;
+      overflow: hidden;
+      background: var(--navy);
+      color: white;
+      min-height: 250px;
+      border-radius: var(--radius);
+      padding: 24px;
+      display: flex;
+      align-items: end;
+    }
+
+    .sector-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: 0.18;
+      background-image:
+        linear-gradient(45deg, rgba(255,255,255,0.08) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,0.08) 25%, transparent 25%);
+      background-size: 36px 36px;
+    }
+
+    .sector-icon {
+      position: absolute;
+      top: 24px;
+      inset-inline-end: 24px;
+      opacity: 0.18;
+      font-size: 70px;
+    }
+
+    .sector-content {
+      position: relative;
+      z-index: 2;
+      background: rgba(255,255,255,0.96);
+      color: var(--navy);
+      border-radius: 18px;
+      padding: 18px;
+      width: 100%;
+    }
+
+    .sector-category {
+      color: var(--gold);
+      font-size: 14px;
+      font-weight: 900;
+    }
+
+    .sector-title {
+      font-size: 18px;
+      font-weight: 900;
+      line-height: 1.4;
+    }
+
+    .number-box {
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
+      background: var(--gold);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 22px;
+      font-weight: 900;
+      margin-bottom: 20px;
+    }
+
+    .cta {
+      background: white;
+    }
+
+    .cta-box {
+      position: relative;
+      overflow: hidden;
+      background: var(--navy);
+      color: white;
+      border-radius: 34px;
+      padding: 54px 28px;
+      text-align: center;
+      box-shadow: 0 24px 60px rgba(0, 31, 65, 0.18);
+    }
+
+    .cta-box h2 {
+      font-size: clamp(30px, 4vw, 44px);
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .cta-box p {
+      color: #D1D5DB;
+      max-width: 680px;
+      margin: 0 auto 28px;
+    }
+
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .btn-white {
+      background: white;
+      color: var(--navy);
+    }
+
+    .btn-white:hover {
+      background: #F3F4F6;
+    }
+
+    .footer {
+      background: var(--navy);
+      color: #D1D5DB;
+      border-top: 4px solid var(--gold);
+      padding: 54px 0 28px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 0.8fr 1fr;
+      gap: 44px;
+    }
+
+    .footer h3,
+    .footer h4 {
+      color: white;
+      font-weight: 900;
+      margin-bottom: 18px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .footer-logo {
+      width: 58px;
+      height: 58px;
+      background: white;
+      border-radius: 14px;
+      border: 1px solid var(--gold);
+      padding: 5px;
+    }
+
+    .footer p,
+    .footer li {
+      font-size: 14px;
+    }
+
+    .footer ul {
+      list-style: none;
+    }
+
+    .footer li {
+      margin-bottom: 12px;
+    }
+
+    .footer a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 40px;
+      padding-top: 22px;
+      font-size: 14px;
+    }
+
+    .gold-text {
+      color: var(--gold);
+      font-weight: 900;
+    }
+
+    .floating-whatsapp {
+  position: fixed;
+  bottom: 24px;
+  inset-inline-start: 24px;
+  z-index: 999;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+  transition: 0.2s;
+}
+
+.floating-whatsapp svg {
+  width: 34px;
+  height: 34px;
+  display: block;
+}
+
+    .floating-whatsapp:hover {
+      transform: scale(1.08);
+      background: #128C7E;
+    }
+
+    html[dir="ltr"] .floating-whatsapp {
+      inset-inline-start: auto;
+      inset-inline-end: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      .nav-menu,
+      .desktop-contact {
+        display: none;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-logo-card {
+        display: none;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .sectors-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .navbar {
+        height: 76px;
+      }
+
+      .brand-logo {
+        width: 50px;
+        height: 50px;
+      }
+
+      .brand-title {
+        font-size: 15px;
+      }
+
+      .brand-subtitle {
+        font-size: 12px;
+      }
+
+      .hero {
+        padding: 130px 0 60px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .stats,
+      .about-grid,
+      .why-grid,
+      .services-grid,
+      .sectors-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 64px 0;
+      }
+
+      .card {
+        padding: 24px;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .hero-actions,
+      .cta-actions {
+        width: 100%;
+      }
+
+      .floating-whatsapp {
+        width: 56px;
+        height: 56px;
+        font-size: 26px;
+        bottom: 18px;
+        inset-inline-start: 18px;
+      }
+
+      html[dir="ltr"] .floating-whatsapp {
+        inset-inline-end: 18px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Contractor",
+      "name": "مؤسسة معتز سعود خلف الشمري",
+      "alternateName": "MUTAZ SAUD KH ALSHAMMARI Establishment",
+      "description": "مؤسسة سعودية متخصصة في المقاولات العامة، الإنشاءات، البنية التحتية، التشطيبات، والأعمال الكهروميكانيكية والتطوير العقاري.",
+      "areaServed": "Saudi Arabia",
+      "identifier": "7054234989",
+      "url": "https://ecode.sa/mutazsk/",
+      "telephone": "+966503343313"
+    }
+  </script>
+</head>
+
+<body>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container">
+      <nav class="navbar">
+        <a href="#home" class="brand">
+          <div class="brand-logo">
+            <img src="favicon.webp" alt="شعار مؤسسة معتز الشمري للمقاولات" onerror="this.src='favicon.webp'">
+          </div>
+          <div>
+            <div class="brand-title" data-ar="مؤسسة معتز الشمري" data-en="Mutaz Alshammari">مؤسسة معتز الشمري</div>
+            <div class="brand-subtitle" data-ar="للمقاولات" data-en="Contracting">للمقاولات</div>
+          </div>
+        </a>
+
+        <ul class="nav-menu">
+          <li><a class="nav-link" href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+          <li><a class="nav-link" href="#about" data-ar="من نحن" data-en="About">من نحن</a></li>
+          <li><a class="nav-link" href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a></li>
+          <li><a class="nav-link" href="#sectors" data-ar="مجالات العمل" data-en="Work Fields">مجالات العمل</a></li>
+          <li><a class="nav-link" href="#why" data-ar="لماذا نحن" data-en="Why Us">لماذا نحن</a></li>
+        </ul>
+
+        <div class="nav-actions">
+          <button class="lang-btn" id="langBtn" type="button">EN</button>
+          <a class="btn btn-gold desktop-contact whatsapp-link" href="#" target="_blank" rel="noreferrer" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+        </div>
+      </nav>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-inner">
+        <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
+        <a href="#about" data-ar="من نحن" data-en="About">من نحن</a>
+        <a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+        <a href="#sectors" data-ar="مجالات العمل" data-en="Work Fields">مجالات العمل</a>
+        <a href="#why" data-ar="لماذا نحن" data-en="Why Us">لماذا نحن</a>
+        <a class="whatsapp-link" href="#" target="_blank" rel="noreferrer" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div>
+            <div class="eyebrow" data-ar="مقاولات عامة | بنية تحتية | تطوير عقاري" data-en="General Contracting | Infrastructure | Real Estate Development">
+              مقاولات عامة | بنية تحتية | تطوير عقاري
+            </div>
+
+            <h1 data-ar="مؤسسة معتز الشمري للمقاولات" data-en="Mutaz Alshammari Contracting">
+              مؤسسة معتز الشمري للمقاولات
+            </h1>
+
+            <p data-ar="نقدم حلولاً متكاملة في الإنشاءات العامة، البنية التحتية، التشطيبات، الأعمال الكهروميكانيكية، والتطوير العقاري وفق معايير الجودة والسلامة والالتزام." data-en="We provide integrated solutions in general construction, infrastructure, finishing works, electromechanical systems, and real estate development with a focus on quality, safety, and commitment.">
+              نقدم حلولاً متكاملة في الإنشاءات العامة، البنية التحتية، التشطيبات، الأعمال الكهروميكانيكية، والتطوير العقاري وفق معايير الجودة والسلامة والالتزام.
+            </p>
+
+            <div class="hero-actions">
+              <a class="btn btn-gold whatsapp-link" href="#" target="_blank" rel="noreferrer" data-ar="اطلب استشارة" data-en="Request Consultation">اطلب استشارة</a>
+              <a class="btn btn-outline" href="#services" data-ar="استكشف الخدمات" data-en="Explore Services">استكشف الخدمات</a>
+            </div>
+          </div>
+
+          <div class="hero-logo-card">
+            <img src="mutazsk.webp" alt="Mutaz Alshammari Contracting Logo" onerror="this.src='favicon.webp'">
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat-card">
+            <div class="stat-value" data-ar="98٪" data-en="98%">98٪</div>
+            <div class="stat-label" data-ar="رضا العملاء" data-en="Customer Satisfaction">رضا العملاء</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">100+</div>
+            <div class="stat-label" data-ar="قاعدة العملاء" data-en="Client Base">قاعدة العملاء</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value" data-ar="متكامل" data-en="Integrated">متكامل</div>
+            <div class="stat-label" data-ar="المقاولات والتطوير العقاري" data-en="Contracting & Real Estate Development">المقاولات والتطوير العقاري</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white" id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>
+          <p data-ar="مؤسسة سعودية متخصصة في المقاولات العامة والتطوير العقاري، تعمل ضمن نطاق واسع من أنشطة الإنشاء والتشييد والبنية التحتية." data-en="A Saudi establishment specialized in general contracting and real estate development, operating across a wide range of construction and infrastructure activities.">
+            مؤسسة سعودية متخصصة في المقاولات العامة والتطوير العقاري، تعمل ضمن نطاق واسع من أنشطة الإنشاء والتشييد والبنية التحتية.
+          </p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <div class="card about-card">
+            <div class="icon-box">◎</div>
+            <h3 data-ar="رؤيتنا" data-en="Our Vision">رؤيتنا</h3>
+            <p data-ar="أن نكون ضمن الخيارات الموثوقة في قطاع المقاولات والتطوير العقاري في المملكة، من خلال تنفيذ أعمال إنشائية وبنية تحتية بجودة عالية ومنهجية واضحة." data-en="To become one of the trusted choices in the contracting and real estate development sector in Saudi Arabia through quality execution and a clear professional approach.">
+              أن نكون ضمن الخيارات الموثوقة في قطاع المقاولات والتطوير العقاري في المملكة، من خلال تنفيذ أعمال إنشائية وبنية تحتية بجودة عالية ومنهجية واضحة.
+            </p>
+          </div>
+
+          <div class="card about-card">
+            <div class="icon-box">✓</div>
+            <h3 data-ar="رسالتنا" data-en="Our Mission">رسالتنا</h3>
+            <p data-ar="تقديم خدمات مقاولات متكاملة توازن بين الجودة، السلامة، الالتزام الزمني، والكفاءة التشغيلية، بما يحقق قيمة حقيقية للعملاء ويساهم في تطوير المشاريع بكفاءة." data-en="To deliver integrated contracting services that balance quality, safety, timeline commitment, and operational efficiency, creating real value for clients and supporting project development.">
+              تقديم خدمات مقاولات متكاملة توازن بين الجودة، السلامة، الالتزام الزمني، والكفاءة التشغيلية، بما يحقق قيمة حقيقية للعملاء ويساهم في تطوير المشاريع بكفاءة.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-heading">
+          <h2 data-ar="خدماتنا المتكاملة" data-en="Comprehensive Services">خدماتنا المتكاملة</h2>
+          <p data-ar="نغطي مجموعة واسعة من أعمال المقاولات والإنشاءات والتطوير العقاري بما يتوافق مع أنشطة السجل التجاري." data-en="We cover a wide range of contracting, construction, infrastructure, and real estate development services.">
+            نغطي مجموعة واسعة من أعمال المقاولات والإنشاءات والتطوير العقاري بما يتوافق مع أنشطة السجل التجاري.
+          </p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="services-grid">
+          <div class="card service-card">
+            <div class="icon-box">▦</div>
+            <h3 data-ar="الإنشاءات العامة والمباني" data-en="General Construction & Buildings">الإنشاءات العامة والمباني</h3>
+            <p data-ar="تنفيذ المباني السكنية وغير السكنية والحكومية، المباني الجاهزة، أعمال الترميم، الهدم، وتجهيز المواقع." data-en="Residential, non-residential and government buildings, prefabricated buildings, restoration works, demolition, and site preparation.">تنفيذ المباني السكنية وغير السكنية والحكومية، المباني الجاهزة، أعمال الترميم، الهدم، وتجهيز المواقع.</p>
+          </div>
+
+          <div class="card service-card">
+            <div class="icon-box">⌁</div>
+            <h3 data-ar="الطرق والجسور والبنية التحتية" data-en="Roads, Bridges & Infrastructure">الطرق والجسور والبنية التحتية</h3>
+            <p data-ar="إنشاء وصيانة الطرق، الشوارع، الأرصفة، الجسور، الأنفاق، السكك الحديدية، ومهابط الطائرات." data-en="Construction and maintenance of roads, streets, sidewalks, bridges, tunnels, railways, and aircraft landing areas.">إنشاء وصيانة الطرق، الشوارع، الأرصفة، الجسور، الأنفاق، السكك الحديدية، ومهابط الطائرات.</p>
+          </div>
+
+          <div class="card service-card">
+            <div class="icon-box">⌬</div>
+            <h3 data-ar="الشبكات والتمديدات" data-en="Networks & Extensions">الشبكات والتمديدات</h3>
+            <p data-ar="تمديد شبكات المياه، الصرف الصحي، الكهرباء، الاتصالات، النفط والغاز، الري، والأنابيب بمختلف أنواعها." data-en="Water, sewage, electricity, telecom, oil and gas, irrigation, and various pipeline extension works.">تمديد شبكات المياه، الصرف الصحي، الكهرباء، الاتصالات، النفط والغاز، الري، والأنابيب بمختلف أنواعها.</p>
+          </div>
+
+          <div class="card service-card">
+            <div class="icon-box">▣</div>
+            <h3 data-ar="المحطات والمرافق المتخصصة" data-en="Stations & Specialized Facilities">المحطات والمرافق المتخصصة</h3>
+            <p data-ar="إنشاء وصيانة محطات الطاقة، المياه، الصرف الصحي، الاتصالات، المرافق البحرية، الموانئ، السدود والمشاريع المتخصصة." data-en="Construction and maintenance of power stations, water stations, sewage plants, telecom facilities, ports, marine facilities, dams, and specialized projects.">إنشاء وصيانة محطات الطاقة، المياه، الصرف الصحي، الاتصالات، المرافق البحرية، الموانئ، السدود والمشاريع المتخصصة.</p>
+          </div>
+
+          <div class="card service-card">
+            <div class="icon-box">⚙</div>
+            <h3 data-ar="الأعمال الكهروميكانيكية والسلامة" data-en="Electromechanical & Safety Works">الأعمال الكهروميكانيكية والسلامة</h3>
+            <p data-ar="تركيب وصيانة أنظمة الكهرباء، التكييف، الإطفاء، الإنذار، المصاعد، الأبواب الأوتوماتيكية، الطاقة الشمسية، وأنظمة السلامة." data-en="Installation and maintenance of electrical systems, HVAC, fire alarm and firefighting systems, elevators, automatic doors, solar energy, and safety systems.">تركيب وصيانة أنظمة الكهرباء، التكييف، الإطفاء، الإنذار، المصاعد، الأبواب الأوتوماتيكية، الطاقة الشمسية، وأنظمة السلامة.</p>
+          </div>
+
+          <div class="card service-card">
+            <div class="icon-box">◫</div>
+            <h3 data-ar="التشطيبات والديكور" data-en="Finishing & Decoration">التشطيبات والديكور</h3>
+            <p data-ar="أعمال الدهانات، السيراميك، الرخام، الحجر، الزجاج، الأسقف، العوازل، الديكورات، المطابخ، الأبواب والنوافذ." data-en="Painting, ceramic, marble, stone, glass, ceilings, insulation, decoration works, kitchens, doors and windows.">أعمال الدهانات، السيراميك، الرخام، الحجر، الزجاج، الأسقف، العوازل، الديكورات، المطابخ، الأبواب والنوافذ.</p>
+          </div>
+
+          <div class="card service-card">
+            <div class="icon-box">▲</div>
+            <h3 data-ar="الأعمال المتخصصة والمعدات" data-en="Specialized Works & Equipment">الأعمال المتخصصة والمعدات</h3>
+            <p data-ar="تركيب السقالات، حمامات السباحة، أنظمة الرفوف، الوحدات مسبقة الشد، وتأجير معدات التشييد والبناء مع مشغل." data-en="Scaffolding, swimming pools, storage rack systems, pre-stressed units, and construction equipment rental with operator.">تركيب السقالات، حمامات السباحة، أنظمة الرفوف، الوحدات مسبقة الشد، وتأجير معدات التشييد والبناء مع مشغل.</p>
+          </div>
+
+          <div class="card service-card">
+            <div class="icon-box">⌂</div>
+            <h3 data-ar="التطوير العقاري" data-en="Real Estate Development">التطوير العقاري</h3>
+            <p data-ar="شراء وبيع وتقسيم الأراضي والعقارات، التطوير العقاري للمباني السكنية والتجارية، وإدارة المخازن ذاتية التخزين." data-en="Buying, selling and subdividing lands and properties, development of residential and commercial buildings, and self-storage management.">شراء وبيع وتقسيم الأراضي والعقارات، التطوير العقاري للمباني السكنية والتجارية، وإدارة المخازن ذاتية التخزين.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white" id="sectors">
+      <div class="container">
+        <div class="section-heading">
+          <h2 data-ar="مجالات العمل" data-en="Work Fields">مجالات العمل</h2>
+          <p data-ar="نخدم قطاعات متنوعة ضمن نطاق المقاولات العامة والبنية التحتية والتطوير العقاري." data-en="We serve various sectors across general contracting, infrastructure, and real estate development.">
+            نخدم قطاعات متنوعة ضمن نطاق المقاولات العامة والبنية التحتية والتطوير العقاري.
+          </p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="sectors-grid">
+          <div class="sector-card">
+            <div class="sector-icon">▦</div>
+            <div class="sector-content">
+              <div class="sector-category" data-ar="إنشاءات عامة" data-en="General Construction">إنشاءات عامة</div>
+              <div class="sector-title" data-ar="المباني السكنية والتجارية" data-en="Residential & Commercial Buildings">المباني السكنية والتجارية</div>
+            </div>
+          </div>
+
+          <div class="sector-card">
+            <div class="sector-icon">⌁</div>
+            <div class="sector-content">
+              <div class="sector-category" data-ar="بنية تحتية" data-en="Infrastructure">بنية تحتية</div>
+              <div class="sector-title" data-ar="الطرق والجسور والأنفاق" data-en="Roads, Bridges & Tunnels">الطرق والجسور والأنفاق</div>
+            </div>
+          </div>
+
+          <div class="sector-card">
+            <div class="sector-icon">⌬</div>
+            <div class="sector-content">
+              <div class="sector-category" data-ar="خدمات ومرافق" data-en="Utilities">خدمات ومرافق</div>
+              <div class="sector-title" data-ar="الشبكات والمحطات" data-en="Networks & Stations">الشبكات والمحطات</div>
+            </div>
+          </div>
+
+          <div class="sector-card">
+            <div class="sector-icon">◫</div>
+            <div class="sector-content">
+              <div class="sector-category" data-ar="أعمال تنفيذية" data-en="Execution Works">أعمال تنفيذية</div>
+              <div class="sector-title" data-ar="التشطيبات والترميمات" data-en="Finishing & Restoration">التشطيبات والترميمات</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="why">
+      <div class="container">
+        <div class="section-heading">
+          <h2 data-ar="لماذا مؤسسة معتز الشمري؟" data-en="Why Mutaz Alshammari Contracting?">لماذا مؤسسة معتز الشمري؟</h2>
+          <p data-ar="نحرص على تقديم تجربة مهنية واضحة من بداية المشروع حتى التسليم." data-en="We focus on providing a clear professional experience from project start to delivery.">
+            نحرص على تقديم تجربة مهنية واضحة من بداية المشروع حتى التسليم.
+          </p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="why-grid">
+          <div class="card">
+            <div class="number-box">1</div>
+            <h3 data-ar="نطاق خدمات واسع" data-en="Wide Service Scope">نطاق خدمات واسع</h3>
+            <p data-ar="تغطي المؤسسة أنشطة متعددة تشمل المباني، الطرق، الشبكات، المحطات، التشطيبات والتطوير العقاري." data-en="The establishment covers multiple activities including buildings, roads, networks, stations, finishing works, and real estate development.">
+              تغطي المؤسسة أنشطة متعددة تشمل المباني، الطرق، الشبكات، المحطات، التشطيبات والتطوير العقاري.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="number-box">2</div>
+            <h3 data-ar="التزام بالجودة والسلامة" data-en="Quality & Safety Commitment">التزام بالجودة والسلامة</h3>
+            <p data-ar="نعتمد على تنفيذ منظم يراعي جودة الأعمال ومتطلبات السلامة في مواقع العمل." data-en="We follow organized execution practices that consider work quality and site safety requirements.">
+              نعتمد على تنفيذ منظم يراعي جودة الأعمال ومتطلبات السلامة في مواقع العمل.
+            </p>
+          </div>
+
+          <div class="card">
+            <div class="number-box">3</div>
+            <h3 data-ar="مرونة في التنفيذ" data-en="Execution Flexibility">مرونة في التنفيذ</h3>
+            <p data-ar="القدرة على التعامل مع احتياجات متنوعة للمشاريع السكنية، التجارية، الحكومية، والبنية التحتية." data-en="Ability to handle various project needs across residential, commercial, governmental, and infrastructure fields.">
+              القدرة على التعامل مع احتياجات متنوعة للمشاريع السكنية، التجارية، الحكومية، والبنية التحتية.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta" id="contact">
+      <div class="container">
+        <div class="cta-box">
+          <h2 data-ar="هل لديك مشروع أو استفسار؟" data-en="Have a project or inquiry?">هل لديك مشروع أو استفسار؟</h2>
+          <p data-ar="تواصل معنا الآن لمناقشة احتياجك وتحديد نطاق العمل المناسب." data-en="Contact us now to discuss your requirements and define the suitable scope of work.">
+            تواصل معنا الآن لمناقشة احتياجك وتحديد نطاق العمل المناسب.
+          </p>
+
+          <div class="cta-actions">
+            <a class="btn btn-gold whatsapp-link" href="#" target="_blank" rel="noreferrer" data-ar="تواصل عبر واتساب" data-en="Contact via WhatsApp">تواصل عبر واتساب</a>
+            <a class="btn btn-white" href="tel:+966503343313" dir="ltr">+966503343313</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img class="footer-logo" src="favicon.webp" alt="Mutaz Alshammari Contracting Logo" onerror="this.src='favicon.webp'">
+          <div>
+            <h3 data-ar="مؤسسة معتز الشمري" data-en="Mutaz Alshammari">مؤسسة معتز الشمري</h3>
+            <div class="gold-text" data-ar="للمقاولات" data-en="Contracting">للمقاولات</div>
+          </div>
+        </div>
+
+        <p data-ar="مؤسسة سعودية متخصصة في المقاولات العامة، الإنشاءات، البنية التحتية، التشطيبات، والتطوير العقاري." data-en="A Saudi establishment specialized in general contracting, construction, infrastructure, finishing works, and real estate development.">
+          مؤسسة سعودية متخصصة في المقاولات العامة، الإنشاءات، البنية التحتية، التشطيبات، والتطوير العقاري.
+        </p>
+
+        <p class="gold-text" style="margin-top:14px;" data-ar="مؤسسة معتز سعود خلف الشمري" data-en="MUTAZ SAUD KH ALSHAMMARI Establishment">مؤسسة معتز سعود خلف الشمري</p>
+        <p class="gold-text" dir="ltr" data-ar="الرقم الوطني الموحد: 7054234989" data-en="National Number: 7054234989">الرقم الوطني الموحد: 7054234989</p>
+      </div>
+
+      <div>
+        <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+        <ul>
+          <li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+          <li><a href="#about" data-ar="من نحن" data-en="About">من نحن</a></li>
+          <li><a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a></li>
+          <li><a href="#sectors" data-ar="مجالات العمل" data-en="Work Fields">مجالات العمل</a></li>
+          <li><a href="#why" data-ar="لماذا نحن" data-en="Why Us">لماذا نحن</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 data-ar="تواصل معنا" data-en="Contact">تواصل معنا</h4>
+        <ul>
+          <li><a href="tel:+966503343313" dir="ltr">+966503343313</a></li>
+          <li><a class="whatsapp-link" href="#" target="_blank" rel="noreferrer">WhatsApp</a></li>
+          <li data-ar="المملكة العربية السعودية" data-en="Saudi Arabia">المملكة العربية السعودية</li>
+        </ul>
+
+        <h4 style="margin-top:28px;" data-ar="تابعنا" data-en="Follow Us">تابعنا</h4>
+
+        <div class="social-links">
+          <a href="https://www.instagram.com/mutaz_ksa" target="_blank" rel="noreferrer" aria-label="Instagram">
+            <span>◎</span>
+            mutaz_ksa
+          </a>
+
+          <a href="https://www.tiktok.com/@mutaz_ksa" target="_blank" rel="noreferrer" aria-label="TikTok">
+            <span>♪</span>
+            mutaz_ksa
+          </a>
+
+          <a href="https://x.com/mutaz_ksa" target="_blank" rel="noreferrer" aria-label="X">
+            <span>𝕏</span>
+            mutaz_ksa
+          </a>
+
+          <a href="#" aria-label="LinkedIn" onclick="return false;" class="disabled-social">
+            <span>in</span>
+            LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom" data-ar="جميع الحقوق محفوظة © 2026" data-en="All rights reserved © 2026">
+      جميع الحقوق محفوظة © 2026
+    </div>
+  </div>
+</footer>
+
+  <a class="floating-whatsapp whatsapp-link" href="#" target="_blank" rel="noreferrer" aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+    <path fill="currentColor" d="M16.04 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.26.59 4.47 1.72 6.41L3.12 29.2l6.96-1.82c1.87 1.02 3.98 1.56 6.12 1.56h.01c7.06 0 12.8-5.74 12.8-12.8 0-3.42-1.33-6.64-3.75-9.06A12.72 12.72 0 0 0 16.04 3.2Zm.01 23.58h-.01c-1.91 0-3.78-.51-5.42-1.48l-.39-.23-4.13 1.08 1.1-4.02-.26-.41A10.54 10.54 0 0 1 5.4 16c0-5.86 4.77-10.63 10.64-10.63 2.84 0 5.51 1.11 7.52 3.12a10.55 10.55 0 0 1 3.12 7.51c0 5.86-4.77 10.78-10.63 10.78Zm5.84-7.96c-.32-.16-1.9-.94-2.19-1.04-.29-.11-.5-.16-.71.16-.21.32-.82 1.04-1.01 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.58-1.59-.95-.85-1.59-1.9-1.78-2.22-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.71-.97-2.34-.26-.61-.52-.53-.71-.54h-.61c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66 0 1.57 1.15 3.09 1.31 3.3.16.21 2.27 3.46 5.49 4.85.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37Z"/>
+  </svg>
+</a>
+
+  <script>
+    const WHATSAPP_NUMBER = "966503343313";
+    let currentLang = "ar";
+
+    const header = document.getElementById("siteHeader");
+    const menuBtn = document.getElementById("menuBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const langBtn = document.getElementById("langBtn");
+
+    function updateWhatsappLinks() {
+      const message =
+        currentLang === "ar"
+          ? "السلام عليكم، أود الاستفسار عن خدمات مؤسسة معتز الشمري للمقاولات."
+          : "Hello, I would like to inquire about Mutaz Alshammari Contracting services.";
+
+      const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+      document.querySelectorAll(".whatsapp-link").forEach(link => {
+        link.href = url;
+      });
+    }
+
+    function setLanguage(lang) {
+      currentLang = lang;
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+
+      document.querySelectorAll("[data-ar][data-en]").forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+
+      langBtn.textContent = lang === "ar" ? "EN" : "عربي";
+
+      document.title =
+        lang === "ar"
+          ? "مؤسسة معتز الشمري للمقاولات | Mutaz Alshammari Contracting"
+          : "Mutaz Alshammari Contracting | مؤسسة معتز الشمري للمقاولات";
+
+      updateWhatsappLinks();
+    }
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 40) {
+        header.classList.add("scrolled");
+      } else {
+        header.classList.remove("scrolled");
+      }
+    });
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+      menuBtn.textContent = mobileMenu.classList.contains("active") ? "×" : "☰";
+    });
+
+    document.querySelectorAll(".mobile-menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.remove("active");
+        menuBtn.textContent = "☰";
+      });
+    });
+
+    langBtn.addEventListener("click", () => {
+      setLanguage(currentLang === "ar" ? "en" : "ar");
+      mobileMenu.classList.remove("active");
+      menuBtn.textContent = "☰";
+    });
+
+    setLanguage("ar");
+  </script>
+</body>
+</html>
