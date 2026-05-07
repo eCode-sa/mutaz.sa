@@ -56,6 +56,36 @@
   gap: 10px;
   margin-top: 12px;
 }
+    .footer-bottom {
+  text-align: center;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 40px;
+  padding-top: 22px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+
+.powered-by-ecode {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.75;
+  transition: 0.2s ease;
+}
+
+.powered-by-ecode:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+}
+
+.powered-by-ecode img {
+  height: 34px;
+  width: auto;
+  display: block;
+}
 
 .social-links a {
   display: inline-flex;
@@ -696,14 +726,6 @@
       color: var(--gold);
     }
 
-    .footer-bottom {
-      text-align: center;
-      border-top: 1px solid rgba(255,255,255,0.1);
-      margin-top: 40px;
-      padding-top: 22px;
-      font-size: 14px;
-    }
-
     .gold-text {
       color: var(--gold);
       font-weight: 900;
@@ -839,18 +861,23 @@
   </style>
 
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Contractor",
-      "name": "مؤسسة معتز سعود خلف الشمري",
-      "alternateName": "MUTAZ SAUD KH ALSHAMMARI Establishment",
-      "description": "مؤسسة سعودية متخصصة في المقاولات العامة، الإنشاءات، البنية التحتية، التشطيبات، والأعمال الكهروميكانيكية والتطوير العقاري.",
-      "areaServed": "Saudi Arabia",
-      "identifier": "7054234989",
-      "url": "https://mutaz.sa/",
-      "telephone": "+966503343313"
-    }
-  </script>
+{
+  "@context": "https://schema.org",
+  "@type": "Contractor",
+  "name": "مؤسسة معتز سعود خلف الشمري",
+  "alternateName": "MUTAZ SAUD KH ALSHAMMARI Establishment",
+  "description": "مؤسسة سعودية متخصصة في المقاولات العامة، الإنشاءات، البنية التحتية، التشطيبات، والأعمال الكهروميكانيكية والتطوير العقاري.",
+  "areaServed": "Saudi Arabia",
+  "identifier": "7054234989",
+  "url": "https://mutaz.sa/",
+  "telephone": "+966503343313",
+  "creator": {
+    "@type": "Organization",
+    "name": "Electronic Code Company",
+    "url": "https://ecode.sa"
+  }
+}
+</script>
 </head>
 
 <body>
@@ -1200,9 +1227,15 @@
       </div>
     </div>
 
-    <div class="footer-bottom" data-ar="جميع الحقوق محفوظة © 2026" data-en="All rights reserved © 2026">
-      جميع الحقوق محفوظة © 2026
-    </div>
+    <div class="footer-bottom">
+  <p data-ar="جميع الحقوق محفوظة © 2026" data-en="All rights reserved © 2026">
+    جميع الحقوق محفوظة © 2026
+  </p>
+
+  <a href="https://ecode.sa" target="_blank" rel="noreferrer" class="powered-by-ecode" aria-label="Powered by eCode">
+    <img src="Powered_by_eCode.webp" alt="Powered by eCode">
+  </a>
+</div>
   </div>
 </footer>
 
