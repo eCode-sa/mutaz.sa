@@ -745,6 +745,50 @@
   height: 34px;
   display: block;
 }
+    /* كود شارة الإشراف السعودي */
+.saudi-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(193, 154, 91, 0.15);
+  border: 1px solid var(--gold);
+  padding: 8px 22px;
+  border-radius: 999px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 15px rgba(193, 154, 91, 0.15);
+  animation: pulse-badge 2.5s infinite;
+  backdrop-filter: blur(4px);
+}
+
+.saudi-badge .flag {
+  font-size: 22px;
+  line-height: 1;
+}
+
+.saudi-badge .badge-text {
+  color: #fff;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+@keyframes pulse-badge {
+  0% { box-shadow: 0 0 0 0 rgba(193, 154, 91, 0.4); }
+  70% { box-shadow: 0 0 0 12px rgba(193, 154, 91, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(193, 154, 91, 0); }
+}
+
+@media (max-width: 720px) {
+  .saudi-badge {
+    padding: 6px 18px;
+    margin-bottom: 20px;
+  }
+  .saudi-badge .flag {
+    font-size: 18px;
+  }
+  .saudi-badge .badge-text {
+    font-size: 14px;
+  }
+}
 
     .floating-whatsapp:hover {
       transform: scale(1.08);
@@ -928,8 +972,12 @@
               مؤسسة معتز الشمري للمقاولات
             </h1>
 
-            <p data-ar="نقدم حلولاً متكاملة في الإنشاءات العامة، البنية التحتية، التشطيبات، الأعمال الكهروميكانيكية، والتطوير العقاري وفق معايير الجودة والسلامة والالتزام." data-en="We provide integrated solutions in general construction, infrastructure, finishing works, electromechanical systems, and real estate development with a focus on quality, safety, and commitment.">
-              نقدم حلولاً متكاملة في الإنشاءات العامة، البنية التحتية، التشطيبات، الأعمال الكهروميكانيكية، والتطوير العقاري وفق معايير الجودة والسلامة والالتزام.
+            <div class="saudi-badge">
+              <span class="flag">🇸🇦</span>
+              <span class="badge-text" data-ar="بإدارة وإشراف سعودي 100%" data-en="100% Saudi Management & Supervision">بإدارة وإشراف سعودي 100%</span>
+            </div>
+            <p data-ar="مؤسسة سعودية متخصصة في المقاولات العامة والتطوير العقاري، تعمل بإشراف سعودي ضمن نطاق واسع من أنشطة الإنشاء والتشييد والبنية التحتية." data-en="A Saudi establishment specialized in general contracting and real estate development, operating under Saudi supervision across a wide range of construction, building, and infrastructure activities.">
+              مؤسسة سعودية متخصصة في المقاولات العامة والتطوير العقاري، تعمل بإشراف سعودي ضمن نطاق واسع من أنشطة الإنشاء والتشييد والبنية التحتية.
             </p>
 
             <div class="hero-actions">
@@ -964,9 +1012,9 @@
       <div class="container">
         <div class="section-heading">
           <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>
-          <p data-ar="مؤسسة سعودية متخصصة في المقاولات العامة والتطوير العقاري، تعمل ضمن نطاق واسع من أنشطة الإنشاء والتشييد والبنية التحتية." data-en="A Saudi establishment specialized in general contracting and real estate development, operating across a wide range of construction and infrastructure activities.">
-            مؤسسة سعودية متخصصة في المقاولات العامة والتطوير العقاري، تعمل ضمن نطاق واسع من أنشطة الإنشاء والتشييد والبنية التحتية.
-          </p>
+          <p data-ar="أن نكون ضمن الخيارات الموثوقة في قطاع المقاولات والتطوير العقاري في المملكة العربية السعودية، من خلال تنفيذ أعمال إنشائية وبنية تحتية بجودة عالية ومنهجية واضحة وفق المواصفات والمقاييس السعودية (كود البناء السعودي)" data-en="To be among the trusted choices in the contracting and real estate development sector in the Kingdom of Saudi Arabia, through executing high-quality construction and infrastructure works with a clear methodology in accordance with Saudi specifications and standards (Saudi Building Code).">
+  أن نكون ضمن الخيارات الموثوقة في قطاع المقاولات والتطوير العقاري في المملكة العربية السعودية، من خلال تنفيذ أعمال إنشائية وبنية تحتية بجودة عالية ومنهجية واضحة وفق المواصفات والمقاييس السعودية (كود البناء السعودي)
+</p>
           <div class="section-line"></div>
         </div>
 
@@ -982,9 +1030,9 @@
           <div class="card about-card">
             <div class="icon-box">✓</div>
             <h3 data-ar="رسالتنا" data-en="Our Mission">رسالتنا</h3>
-            <p data-ar="تقديم خدمات مقاولات متكاملة توازن بين الجودة، السلامة، الالتزام الزمني، والكفاءة التشغيلية، بما يحقق قيمة حقيقية للعملاء ويساهم في تطوير المشاريع بكفاءة." data-en="To deliver integrated contracting services that balance quality, safety, timeline commitment, and operational efficiency, creating real value for clients and supporting project development.">
-              تقديم خدمات مقاولات متكاملة توازن بين الجودة، السلامة، الالتزام الزمني، والكفاءة التشغيلية، بما يحقق قيمة حقيقية للعملاء ويساهم في تطوير المشاريع بكفاءة.
-            </p>
+            <p data-ar="تقديم خدمات مقاولات متكاملة تُوازن بين الجودة، السلامة، الالتزام الزمني، والكفاءة السعودية التشغيلية، مع التركيز على تحقيق أعلى مستويات رضا العملاء، بما يحقق قيمة حقيقية ويساهم في تطوير المشاريع بكفاءة." data-en="To provide integrated contracting services that balance quality, safety, timeline commitment, and Saudi operational efficiency, with a focus on achieving the highest levels of customer satisfaction, creating real value and contributing to the efficient development of projects.">
+  تقديم خدمات مقاولات متكاملة تُوازن بين الجودة، السلامة، الالتزام الزمني، والكفاءة السعودية التشغيلية، مع التركيز على تحقيق أعلى مستويات رضا العملاء، بما يحقق قيمة حقيقية ويساهم في تطوير المشاريع بكفاءة.
+</p>
           </div>
         </div>
       </div>
@@ -994,9 +1042,9 @@
       <div class="container">
         <div class="section-heading">
           <h2 data-ar="خدماتنا المتكاملة" data-en="Comprehensive Services">خدماتنا المتكاملة</h2>
-          <p data-ar="نغطي مجموعة واسعة من أعمال المقاولات والإنشاءات والتطوير العقاري بما يتوافق مع أنشطة السجل التجاري." data-en="We cover a wide range of contracting, construction, infrastructure, and real estate development services.">
-            نغطي مجموعة واسعة من أعمال المقاولات والإنشاءات والتطوير العقاري بما يتوافق مع أنشطة السجل التجاري.
-          </p>
+         <p data-ar="نغطي مجموعة واسعة من أعمال المقاولات والإنشاءات والتطوير العقاري بما يتوافق مع كود البناء السعودي" data-en="We cover a wide range of contracting, construction, and real estate development services in compliance with the Saudi Building Code.">
+  نغطي مجموعة واسعة من أعمال المقاولات والإنشاءات والتطوير العقاري بما يتوافق مع كود البناء السعودي
+</p>
           <div class="section-line"></div>
         </div>
 
@@ -1102,9 +1150,9 @@
       <div class="container">
         <div class="section-heading">
           <h2 data-ar="لماذا مؤسسة معتز الشمري؟" data-en="Why Mutaz Alshammari Contracting?">لماذا مؤسسة معتز الشمري؟</h2>
-          <p data-ar="نحرص على تقديم تجربة مهنية واضحة من بداية المشروع حتى التسليم." data-en="We focus on providing a clear professional experience from project start to delivery.">
-            نحرص على تقديم تجربة مهنية واضحة من بداية المشروع حتى التسليم.
-          </p>
+          <p data-ar="نحرص على تقديم تجربة مهنية واضحة من بداية المشروع حتى التسليم، عبر كفاءات سعودية مؤهلة تلتزم بالجودة والاحترافية في جميع مراحل التنفيذ." data-en="We focus on providing a clear professional experience from project start to delivery, through qualified Saudi talents committed to quality and professionalism across all stages of execution.">
+  نحرص على تقديم تجربة مهنية واضحة من بداية المشروع حتى التسليم، عبر كفاءات سعودية مؤهلة تلتزم بالجودة والاحترافية في جميع مراحل التنفيذ.
+</p>
           <div class="section-line"></div>
         </div>
 
