@@ -1,4 +1,4 @@
-const CACHE_NAME = "mutaz-sa-cache-v2"; // غير هذا الرقم (v3, v4..) في كل مرة تقوم فيها بتحديث الموقع
+const CACHE_NAME = "mutaz-sa-cache-v3"; // غير هذا الرقم (v3, v4..) في كل مرة تقوم فيها بتحديث الموقع
 
 const urlsToCache = [
   "/",
