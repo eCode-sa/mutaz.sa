@@ -21,9 +21,8 @@
 
   <link rel="icon" href="favicon.webp" type="image/webp" />
 
-  <!-- PWA App Settings -->
   <link rel="manifest" href="manifest.json" />
-  
+
   <meta name="application-name" content="mutaz.sa" />
   <meta name="apple-mobile-web-app-title" content="mutaz.sa" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -50,72 +49,6 @@
       --shadow: 0 16px 40px rgba(0, 31, 65, 0.08);
       --radius: 24px;
     }
-    .social-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 12px;
-}
-    .footer-bottom {
-  border-top: 1px solid rgba(255,255,255,0.1);
-  margin-top: 40px;
-  padding-top: 22px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.powered-by-ecode:hover {
-  opacity: 1;
-  transform: translateY(-1px);
-}
-
-.powered-by-ecode img {
-  height: 42px;
-  width: auto;
-  display: block;
-}
-
-.social-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 40px;
-  padding: 8px 12px;
-  border: 1px solid rgba(255,255,255,0.14);
-  border-radius: 12px;
-  color: #D1D5DB;
-  font-size: 13px;
-  font-weight: 800;
-  transition: 0.2s ease;
-}
-
-.social-links a:hover {
-  color: white;
-  border-color: var(--gold);
-  background: rgba(193, 154, 91, 0.12);
-}
-
-.social-links span {
-  width: 22px;
-  height: 22px;
-  border-radius: 7px;
-  background: rgba(193, 154, 91, 0.14);
-  color: var(--gold);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 900;
-  line-height: 1;
-}
-
-.disabled-social {
-  opacity: 0.55;
-  cursor: not-allowed;
-}
 
     * {
       box-sizing: border-box;
@@ -175,7 +108,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 24px;
+      gap: 20px;
     }
 
     .brand {
@@ -183,6 +116,7 @@
       align-items: center;
       gap: 12px;
       min-width: 220px;
+      flex: 0 0 auto;
     }
 
     .brand-logo {
@@ -203,6 +137,7 @@
       font-size: 18px;
       font-weight: 900;
       line-height: 1.2;
+      white-space: nowrap;
     }
 
     .brand-subtitle {
@@ -214,15 +149,18 @@
     .nav-menu {
       display: flex;
       align-items: center;
-      gap: 26px;
+      gap: 18px;
       list-style: none;
+      flex: 1;
+      justify-content: center;
     }
 
     .nav-link {
-      font-size: 14px;
+      font-size: 13px;
       font-weight: 800;
       color: rgba(255, 255, 255, 0.9);
       transition: 0.2s;
+      white-space: nowrap;
     }
 
     .site-header.scrolled .nav-link {
@@ -236,7 +174,8 @@
     .nav-actions {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
+      flex: 0 0 auto;
     }
 
     .lang-btn,
@@ -268,6 +207,7 @@
       border: 1px solid transparent;
       cursor: pointer;
       font-family: inherit;
+      text-align: center;
     }
 
     .btn-gold {
@@ -288,6 +228,15 @@
     .btn-outline:hover {
       background: white;
       color: var(--navy);
+    }
+
+    .btn-white {
+      background: white;
+      color: var(--navy);
+    }
+
+    .btn-white:hover {
+      background: #F3F4F6;
     }
 
     .menu-btn {
@@ -407,6 +356,37 @@
       border: 1px solid rgba(255,255,255,0.4);
     }
 
+    .saudi-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(193, 154, 91, 0.15);
+      border: 1px solid var(--gold);
+      padding: 8px 22px;
+      border-radius: 999px;
+      margin-bottom: 24px;
+      box-shadow: 0 4px 15px rgba(193, 154, 91, 0.15);
+      animation: pulse-badge 2.5s infinite;
+      backdrop-filter: blur(4px);
+    }
+
+    .saudi-badge .flag {
+      font-size: 22px;
+      line-height: 1;
+    }
+
+    .saudi-badge .badge-text {
+      color: #fff;
+      font-weight: 900;
+      font-size: 16px;
+    }
+
+    @keyframes pulse-badge {
+      0% { box-shadow: 0 0 0 0 rgba(193, 154, 91, 0.4); }
+      70% { box-shadow: 0 0 0 12px rgba(193, 154, 91, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(193, 154, 91, 0); }
+    }
+
     .stats {
       position: relative;
       z-index: 2;
@@ -459,7 +439,7 @@
 
     .section-heading p {
       color: var(--muted);
-      max-width: 760px;
+      max-width: 820px;
       margin: 0 auto;
     }
 
@@ -526,6 +506,7 @@
       justify-content: center;
       margin-bottom: 22px;
       font-size: 30px;
+      font-weight: 900;
     }
 
     .card h3 {
@@ -622,6 +603,66 @@
       margin-bottom: 20px;
     }
 
+    .highlight-section {
+      position: relative;
+      overflow: hidden;
+      background: var(--navy);
+      color: white;
+    }
+
+    .highlight-section::before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      background: rgba(193, 154, 91, 0.14);
+      filter: blur(70px);
+      inset-inline-start: -180px;
+      top: 40px;
+    }
+
+    .highlight-section .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    .highlight-section .section-heading h2 {
+      color: white;
+    }
+
+    .highlight-section .section-heading p {
+      color: #D1D5DB;
+    }
+
+    .process-card {
+      background: rgba(255,255,255,0.08);
+      border-color: rgba(255,255,255,0.14);
+    }
+
+    .process-card h3 {
+      color: white;
+    }
+
+    .process-card p {
+      color: #D1D5DB;
+    }
+
+    .process-card .number-box {
+      background: white;
+      color: var(--navy);
+    }
+
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+
+    .faq-card {
+      background: var(--concrete);
+    }
+
     .cta {
       background: white;
     }
@@ -635,6 +676,22 @@
       padding: 54px 28px;
       text-align: center;
       box-shadow: 0 24px 60px rgba(0, 31, 65, 0.18);
+    }
+
+    .cta-box::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255,255,255,0.05) 25%, transparent 25%);
+      background-size: 38px 38px;
+      opacity: 0.7;
+    }
+
+    .cta-box > * {
+      position: relative;
+      z-index: 2;
     }
 
     .cta-box h2 {
@@ -654,15 +711,6 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 14px;
-    }
-
-    .btn-white {
-      background: white;
-      color: var(--navy);
-    }
-
-    .btn-white:hover {
-      background: #F3F4F6;
     }
 
     .footer {
@@ -723,72 +771,101 @@
       font-weight: 900;
     }
 
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .social-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      min-height: 40px;
+      padding: 8px 12px;
+      border: 1px solid rgba(255,255,255,0.14);
+      border-radius: 12px;
+      color: #D1D5DB;
+      font-size: 13px;
+      font-weight: 800;
+      transition: 0.2s ease;
+    }
+
+    .social-links a:hover {
+      color: white;
+      border-color: var(--gold);
+      background: rgba(193, 154, 91, 0.12);
+    }
+
+    .social-links span {
+      width: 22px;
+      height: 22px;
+      border-radius: 7px;
+      background: rgba(193, 154, 91, 0.14);
+      color: var(--gold);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      line-height: 1;
+    }
+
+    .disabled-social {
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 40px;
+      padding-top: 22px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .powered-by-ecode {
+      opacity: 0.88;
+      transition: 0.2s ease;
+    }
+
+    .powered-by-ecode:hover {
+      opacity: 1;
+      transform: translateY(-1px);
+    }
+
+    .powered-by-ecode img {
+      height: 42px;
+      width: auto;
+      display: block;
+    }
+
     .floating-whatsapp {
-  position: fixed;
-  bottom: 24px;
-  inset-inline-start: 24px;
-  z-index: 999;
-  width: 62px;
-  height: 62px;
-  border-radius: 50%;
-  background: #25D366;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 12px 28px rgba(0,0,0,0.25);
-  transition: 0.2s;
-}
+      position: fixed;
+      bottom: 24px;
+      inset-inline-start: 24px;
+      z-index: 999;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+      transition: 0.2s;
+    }
 
-.floating-whatsapp svg {
-  width: 34px;
-  height: 34px;
-  display: block;
-}
-    /* كود شارة الإشراف السعودي */
-.saudi-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(193, 154, 91, 0.15);
-  border: 1px solid var(--gold);
-  padding: 8px 22px;
-  border-radius: 999px;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 15px rgba(193, 154, 91, 0.15);
-  animation: pulse-badge 2.5s infinite;
-  backdrop-filter: blur(4px);
-}
-
-.saudi-badge .flag {
-  font-size: 22px;
-  line-height: 1;
-}
-
-.saudi-badge .badge-text {
-  color: #fff;
-  font-weight: 900;
-  font-size: 16px;
-}
-
-@keyframes pulse-badge {
-  0% { box-shadow: 0 0 0 0 rgba(193, 154, 91, 0.4); }
-  70% { box-shadow: 0 0 0 12px rgba(193, 154, 91, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(193, 154, 91, 0); }
-}
-
-@media (max-width: 720px) {
-  .saudi-badge {
-    padding: 6px 18px;
-    margin-bottom: 20px;
-  }
-  .saudi-badge .flag {
-    font-size: 18px;
-  }
-  .saudi-badge .badge-text {
-    font-size: 14px;
-  }
-}
+    .floating-whatsapp svg {
+      width: 34px;
+      height: 34px;
+      display: block;
+    }
 
     .floating-whatsapp:hover {
       transform: scale(1.08);
@@ -798,6 +875,20 @@
     html[dir="ltr"] .floating-whatsapp {
       inset-inline-start: auto;
       inset-inline-end: 24px;
+    }
+
+    @media (max-width: 1180px) {
+      .nav-menu {
+        gap: 12px;
+      }
+
+      .nav-link {
+        font-size: 12px;
+      }
+
+      .desktop-contact {
+        padding-inline: 16px;
+      }
     }
 
     @media (max-width: 1024px) {
@@ -826,6 +917,10 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
       .footer-grid {
         grid-template-columns: 1fr;
       }
@@ -834,6 +929,11 @@
     @media (max-width: 720px) {
       .navbar {
         height: 76px;
+      }
+
+      .brand {
+        min-width: auto;
+        max-width: 230px;
       }
 
       .brand-logo {
@@ -849,20 +949,49 @@
         font-size: 12px;
       }
 
+      .nav-actions {
+        gap: 10px;
+      }
+
+      .lang-btn {
+        font-size: 13px;
+      }
+
       .hero {
         padding: 130px 0 60px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
       }
 
       .hero p {
         font-size: 17px;
       }
 
+      .saudi-badge {
+        padding: 6px 18px;
+        margin-bottom: 20px;
+      }
+
+      .saudi-badge .flag {
+        font-size: 18px;
+      }
+
+      .saudi-badge .badge-text {
+        font-size: 14px;
+      }
+
       .stats,
       .about-grid,
-      .why-grid,
       .services-grid,
-      .sectors-grid {
+      .sectors-grid,
+      .faq-grid {
         grid-template-columns: 1fr;
+      }
+
+      .stat-card {
+        text-align: center;
       }
 
       .section {
@@ -882,10 +1011,18 @@
         width: 100%;
       }
 
+      .footer-bottom {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .powered-by-ecode img {
+        height: 34px;
+      }
+
       .floating-whatsapp {
         width: 56px;
         height: 56px;
-        font-size: 26px;
         bottom: 18px;
         inset-inline-start: 18px;
       }
@@ -897,23 +1034,24 @@
   </style>
 
   <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Contractor",
-  "name": "مؤسسة معتز سعود خلف الشمري",
-  "alternateName": "MUTAZ SAUD KH ALSHAMMARI Establishment",
-  "description": "مؤسسة سعودية متخصصة في المقاولات العامة، الإنشاءات، البنية التحتية، التشطيبات، والأعمال الكهروميكانيكية والتطوير العقاري.",
-  "areaServed": "Saudi Arabia",
-  "identifier": "7054234989",
-  "url": "https://mutaz.sa/",
-  "telephone": "+966503343313",
-  "creator": {
-    "@type": "Organization",
-    "name": "Electronic Code Company",
-    "url": "https://ecode.sa"
+  {
+    "@context": "https://schema.org",
+    "@type": "Contractor",
+    "name": "مؤسسة معتز سعود خلف الشمري",
+    "alternateName": "MUTAZ SAUD KH ALSHAMMARI Establishment",
+    "description": "مؤسسة سعودية متخصصة في المقاولات العامة، الإنشاءات، البنية التحتية، التشطيبات، والأعمال الكهروميكانيكية والتطوير العقاري.",
+    "areaServed": "Saudi Arabia",
+    "identifier": "7054234989",
+    "url": "https://mutaz.sa/",
+    "telephone": "+966503343313",
+    "email": "info@mutaz.sa",
+    "creator": {
+      "@type": "Organization",
+      "name": "Electronic Code Company",
+      "url": "https://ecode.sa"
+    }
   }
-}
-</script>
+  </script>
 </head>
 
 <body>
@@ -935,14 +1073,17 @@
           <li><a class="nav-link" href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
           <li><a class="nav-link" href="#about" data-ar="من نحن" data-en="About">من نحن</a></li>
           <li><a class="nav-link" href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a></li>
+          <li><a class="nav-link" href="#projects" data-ar="المشاريع" data-en="Projects">المشاريع</a></li>
           <li><a class="nav-link" href="#sectors" data-ar="مجالات العمل" data-en="Work Fields">مجالات العمل</a></li>
+          <li><a class="nav-link" href="#process" data-ar="آلية العمل" data-en="Process">آلية العمل</a></li>
           <li><a class="nav-link" href="#why" data-ar="لماذا نحن" data-en="Why Us">لماذا نحن</a></li>
+          <li><a class="nav-link" href="#faq" data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة</a></li>
         </ul>
 
         <div class="nav-actions">
-          <button class="lang-btn" id="langBtn" type="button">EN</button>
+          <button class="lang-btn" id="langBtn" type="button" aria-label="Change language">EN</button>
           <a class="btn btn-gold desktop-contact whatsapp-link" href="#" target="_blank" rel="noreferrer" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
-          <button class="menu-btn" id="menuBtn" type="button">☰</button>
+          <button class="menu-btn" id="menuBtn" type="button" aria-label="Open menu">☰</button>
         </div>
       </nav>
     </div>
@@ -952,14 +1093,18 @@
         <a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a>
         <a href="#about" data-ar="من نحن" data-en="About">من نحن</a>
         <a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a>
+        <a href="#projects" data-ar="المشاريع" data-en="Projects">المشاريع</a>
         <a href="#sectors" data-ar="مجالات العمل" data-en="Work Fields">مجالات العمل</a>
+        <a href="#process" data-ar="آلية العمل" data-en="Process">آلية العمل</a>
         <a href="#why" data-ar="لماذا نحن" data-en="Why Us">لماذا نحن</a>
+        <a href="#faq" data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة</a>
         <a class="whatsapp-link" href="#" target="_blank" rel="noreferrer" data-ar="تواصل معنا" data-en="Contact">تواصل معنا</a>
       </div>
     </div>
   </header>
 
   <main>
+
     <section class="hero" id="home">
       <div class="container">
         <div class="hero-grid">
@@ -976,8 +1121,10 @@
               <span class="flag">🇸🇦</span>
               <span class="badge-text" data-ar="بإدارة وإشراف سعودي 100%" data-en="100% Saudi Management & Supervision">بإدارة وإشراف سعودي 100%</span>
             </div>
-            <p data-ar="مؤسسة سعودية متخصصة في المقاولات العامة والتطوير العقاري، تعمل بإشراف سعودي ضمن نطاق واسع من أنشطة الإنشاء والتشييد والبنية التحتية." data-en="A Saudi establishment specialized in general contracting and real estate development, operating under Saudi supervision across a wide range of construction, building, and infrastructure activities.">
-              مؤسسة سعودية متخصصة في المقاولات العامة والتطوير العقاري، تعمل بإشراف سعودي ضمن نطاق واسع من أنشطة الإنشاء والتشييد والبنية التحتية.
+
+            <p data-ar="ننفذ أعمال المقاولات العامة، الإنشاءات، التشطيبات، البنية التحتية، والتطوير العقاري بمنهجية واضحة تركز على الجودة، السلامة، والالتزام الزمني."
+               data-en="We execute general contracting, construction, finishing, infrastructure, and real estate development works through a clear methodology focused on quality, safety, and timeline commitment.">
+              ننفذ أعمال المقاولات العامة، الإنشاءات، التشطيبات، البنية التحتية، والتطوير العقاري بمنهجية واضحة تركز على الجودة، السلامة، والالتزام الزمني.
             </p>
 
             <div class="hero-actions">
@@ -993,16 +1140,18 @@
 
         <div class="stats">
           <div class="stat-card">
-            <div class="stat-value" data-ar="98٪" data-en="98%">98٪</div>
-            <div class="stat-label" data-ar="رضا العملاء" data-en="Customer Satisfaction">رضا العملاء</div>
+            <div class="stat-value" data-ar="سعودية" data-en="Saudi">سعودية</div>
+            <div class="stat-label" data-ar="إدارة وإشراف" data-en="Management & Supervision">إدارة وإشراف</div>
           </div>
+
           <div class="stat-card">
-            <div class="stat-value">100+</div>
-            <div class="stat-label" data-ar="قاعدة العملاء" data-en="Client Base">قاعدة العملاء</div>
+            <div class="stat-value" data-ar="متعدد" data-en="Multiple">متعدد</div>
+            <div class="stat-label" data-ar="نطاق الخدمات" data-en="Service Scope">نطاق الخدمات</div>
           </div>
+
           <div class="stat-card">
-            <div class="stat-value" data-ar="متكامل" data-en="Integrated">متكامل</div>
-            <div class="stat-label" data-ar="المقاولات والتطوير العقاري" data-en="Contracting & Real Estate Development">المقاولات والتطوير العقاري</div>
+            <div class="stat-value" data-ar="ملتزم" data-en="Committed">ملتزم</div>
+            <div class="stat-label" data-ar="بالجودة والسلامة" data-en="Quality & Safety">بالجودة والسلامة</div>
           </div>
         </div>
       </div>
@@ -1012,10 +1161,10 @@
       <div class="container">
         <div class="section-heading">
           <h2 data-ar="من نحن" data-en="About Us">من نحن</h2>
-<p data-ar="مؤسسة معتز للمقاولات مؤسسة سعودية متخصصة في المقاولات العامة والتطوير العقاري، تقدم خدمات تنفيذية متكاملة تشمل أعمال الإنشاء والتشييد، البنية التحتية، التشطيبات، وأعمال التطوير، بإشراف كفاءات سعودية وبمنهجية عمل تركز على الجودة، السلامة، الالتزام الزمني، ورضا العميل."
-   data-en="Mutaz Contracting Establishment is a Saudi establishment specialized in general contracting and real estate development. It provides integrated execution services covering construction, infrastructure, finishing, and development works, under the supervision of Saudi competencies and through a work methodology focused on quality, safety, timely delivery, and customer satisfaction.">
-  مؤسسة معتز للمقاولات مؤسسة سعودية متخصصة في المقاولات العامة والتطوير العقاري، تقدم خدمات تنفيذية متكاملة تشمل أعمال الإنشاء والتشييد، البنية التحتية، التشطيبات، وأعمال التطوير، بإشراف كفاءات سعودية وبمنهجية عمل تركز على الجودة، السلامة، الالتزام الزمني، ورضا العميل.
-</p>
+          <p data-ar="مؤسسة معتز للمقاولات مؤسسة سعودية متخصصة في المقاولات العامة والتطوير العقاري، تقدم خدمات تنفيذية متكاملة تشمل أعمال الإنشاء والتشييد، البنية التحتية، التشطيبات، وأعمال التطوير، بإشراف كفاءات سعودية وبمنهجية عمل تركز على الجودة، السلامة، الالتزام الزمني، ورضا العميل."
+             data-en="Mutaz Contracting Establishment is a Saudi establishment specialized in general contracting and real estate development. It provides integrated execution services covering construction, infrastructure, finishing, and development works, under the supervision of Saudi competencies and through a work methodology focused on quality, safety, timely delivery, and customer satisfaction.">
+            مؤسسة معتز للمقاولات مؤسسة سعودية متخصصة في المقاولات العامة والتطوير العقاري، تقدم خدمات تنفيذية متكاملة تشمل أعمال الإنشاء والتشييد، البنية التحتية، التشطيبات، وأعمال التطوير، بإشراف كفاءات سعودية وبمنهجية عمل تركز على الجودة، السلامة، الالتزام الزمني، ورضا العميل.
+          </p>
           <div class="section-line"></div>
         </div>
 
@@ -1023,17 +1172,19 @@
           <div class="card about-card">
             <div class="icon-box">◎</div>
             <h3 data-ar="رؤيتنا" data-en="Our Vision">رؤيتنا</h3>
-            <p data-ar="أن نكون ضمن الخيارات الموثوقة في قطاع المقاولات والتطوير العقاري في المملكة العربية السعودية، من خلال تنفيذ أعمال إنشائية وبنية تحتية بجودة عالية ومنهجية واضحة وفق المواصفات والمقاييس السعودية (كود البناء السعودي)" data-en="To be among the trusted choices in the contracting and real estate development sector in the Kingdom of Saudi Arabia, through executing high-quality construction and infrastructure works with a clear methodology in accordance with Saudi specifications and standards (Saudi Building Code).">
-  أن نكون ضمن الخيارات الموثوقة في قطاع المقاولات والتطوير العقاري في المملكة العربية السعودية، من خلال تنفيذ أعمال إنشائية وبنية تحتية بجودة عالية ومنهجية واضحة وفق المواصفات والمقاييس السعودية (كود البناء السعودي)
-</p>
+            <p data-ar="أن نكون ضمن الخيارات الموثوقة في قطاع المقاولات والتطوير العقاري في المملكة العربية السعودية، من خلال تنفيذ أعمال إنشائية وبنية تحتية بجودة عالية ومنهجية واضحة وفق المواصفات والمقاييس السعودية وكود البناء السعودي."
+               data-en="To be among the trusted choices in the contracting and real estate development sector in Saudi Arabia, through executing high-quality construction and infrastructure works with a clear methodology in accordance with Saudi specifications, standards, and the Saudi Building Code.">
+              أن نكون ضمن الخيارات الموثوقة في قطاع المقاولات والتطوير العقاري في المملكة العربية السعودية، من خلال تنفيذ أعمال إنشائية وبنية تحتية بجودة عالية ومنهجية واضحة وفق المواصفات والمقاييس السعودية وكود البناء السعودي.
+            </p>
           </div>
 
           <div class="card about-card">
             <div class="icon-box">✓</div>
             <h3 data-ar="رسالتنا" data-en="Our Mission">رسالتنا</h3>
-            <p data-ar="تقديم خدمات مقاولات متكاملة تُوازن بين الجودة، السلامة، الالتزام الزمني، والكفاءة السعودية التشغيلية، مع التركيز على تحقيق أعلى مستويات رضا العملاء، بما يحقق قيمة حقيقية ويساهم في تطوير المشاريع بكفاءة." data-en="To provide integrated contracting services that balance quality, safety, timeline commitment, and Saudi operational efficiency, with a focus on achieving the highest levels of customer satisfaction, creating real value and contributing to the efficient development of projects.">
-  تقديم خدمات مقاولات متكاملة تُوازن بين الجودة، السلامة، الالتزام الزمني، والكفاءة السعودية التشغيلية، مع التركيز على تحقيق أعلى مستويات رضا العملاء، بما يحقق قيمة حقيقية ويساهم في تطوير المشاريع بكفاءة.
-</p>
+            <p data-ar="تقديم خدمات مقاولات متكاملة تُوازن بين الجودة، السلامة، الالتزام الزمني، والكفاءة السعودية التشغيلية، مع التركيز على تحقيق أعلى مستويات رضا العملاء بما يحقق قيمة حقيقية للمشاريع."
+               data-en="To provide integrated contracting services that balance quality, safety, timeline commitment, and Saudi operational efficiency, with a focus on customer satisfaction and creating real value for projects.">
+              تقديم خدمات مقاولات متكاملة تُوازن بين الجودة، السلامة، الالتزام الزمني، والكفاءة السعودية التشغيلية، مع التركيز على تحقيق أعلى مستويات رضا العملاء بما يحقق قيمة حقيقية للمشاريع.
+            </p>
           </div>
         </div>
       </div>
@@ -1043,9 +1194,10 @@
       <div class="container">
         <div class="section-heading">
           <h2 data-ar="خدماتنا المتكاملة" data-en="Comprehensive Services">خدماتنا المتكاملة</h2>
-         <p data-ar="نغطي مجموعة واسعة من أعمال المقاولات والإنشاءات والتطوير العقاري بما يتوافق مع كود البناء السعودي" data-en="We cover a wide range of contracting, construction, and real estate development services in compliance with the Saudi Building Code.">
-  نغطي مجموعة واسعة من أعمال المقاولات والإنشاءات والتطوير العقاري بما يتوافق مع كود البناء السعودي
-</p>
+          <p data-ar="نغطي مجموعة واسعة من أعمال المقاولات والإنشاءات والتطوير العقاري بما يتوافق مع كود البناء السعودي."
+             data-en="We cover a wide range of contracting, construction, and real estate development services in compliance with the Saudi Building Code.">
+            نغطي مجموعة واسعة من أعمال المقاولات والإنشاءات والتطوير العقاري بما يتوافق مع كود البناء السعودي.
+          </p>
           <div class="section-line"></div>
         </div>
 
@@ -1053,59 +1205,135 @@
           <div class="card service-card">
             <div class="icon-box">▦</div>
             <h3 data-ar="الإنشاءات العامة والمباني" data-en="General Construction & Buildings">الإنشاءات العامة والمباني</h3>
-            <p data-ar="تنفيذ المباني السكنية وغير السكنية والحكومية، المباني الجاهزة، أعمال الترميم، الهدم، وتجهيز المواقع." data-en="Residential, non-residential and government buildings, prefabricated buildings, restoration works, demolition, and site preparation.">تنفيذ المباني السكنية وغير السكنية والحكومية، المباني الجاهزة، أعمال الترميم، الهدم، وتجهيز المواقع.</p>
+            <p data-ar="تنفيذ المباني السكنية وغير السكنية والحكومية، المباني الجاهزة، أعمال الترميم، الهدم، وتجهيز المواقع."
+               data-en="Residential, non-residential and government buildings, prefabricated buildings, restoration works, demolition, and site preparation.">
+              تنفيذ المباني السكنية وغير السكنية والحكومية، المباني الجاهزة، أعمال الترميم، الهدم، وتجهيز المواقع.
+            </p>
           </div>
 
           <div class="card service-card">
             <div class="icon-box">⌁</div>
             <h3 data-ar="الطرق والجسور والبنية التحتية" data-en="Roads, Bridges & Infrastructure">الطرق والجسور والبنية التحتية</h3>
-            <p data-ar="إنشاء وصيانة الطرق، الشوارع، الأرصفة، الجسور، الأنفاق، السكك الحديدية، ومهابط الطائرات." data-en="Construction and maintenance of roads, streets, sidewalks, bridges, tunnels, railways, and aircraft landing areas.">إنشاء وصيانة الطرق، الشوارع، الأرصفة، الجسور، الأنفاق، السكك الحديدية، ومهابط الطائرات.</p>
+            <p data-ar="إنشاء وصيانة الطرق، الشوارع، الأرصفة، الجسور، الأنفاق، السكك الحديدية، ومهابط الطائرات."
+               data-en="Construction and maintenance of roads, streets, sidewalks, bridges, tunnels, railways, and aircraft landing areas.">
+              إنشاء وصيانة الطرق، الشوارع، الأرصفة، الجسور، الأنفاق، السكك الحديدية، ومهابط الطائرات.
+            </p>
           </div>
 
           <div class="card service-card">
             <div class="icon-box">⌬</div>
             <h3 data-ar="الشبكات والتمديدات" data-en="Networks & Extensions">الشبكات والتمديدات</h3>
-            <p data-ar="تمديد شبكات المياه، الصرف الصحي، الكهرباء، الاتصالات، النفط والغاز، الري، والأنابيب بمختلف أنواعها." data-en="Water, sewage, electricity, telecom, oil and gas, irrigation, and various pipeline extension works.">تمديد شبكات المياه، الصرف الصحي، الكهرباء، الاتصالات، النفط والغاز، الري، والأنابيب بمختلف أنواعها.</p>
+            <p data-ar="تمديد شبكات المياه، الصرف الصحي، الكهرباء، الاتصالات، النفط والغاز، الري، والأنابيب بمختلف أنواعها."
+               data-en="Water, sewage, electricity, telecom, oil and gas, irrigation, and various pipeline extension works.">
+              تمديد شبكات المياه، الصرف الصحي، الكهرباء، الاتصالات، النفط والغاز، الري، والأنابيب بمختلف أنواعها.
+            </p>
           </div>
 
           <div class="card service-card">
             <div class="icon-box">▣</div>
             <h3 data-ar="المحطات والمرافق المتخصصة" data-en="Stations & Specialized Facilities">المحطات والمرافق المتخصصة</h3>
-            <p data-ar="إنشاء وصيانة محطات الطاقة، المياه، الصرف الصحي، الاتصالات، المرافق البحرية، الموانئ، السدود والمشاريع المتخصصة." data-en="Construction and maintenance of power stations, water stations, sewage plants, telecom facilities, ports, marine facilities, dams, and specialized projects.">إنشاء وصيانة محطات الطاقة، المياه، الصرف الصحي، الاتصالات، المرافق البحرية، الموانئ، السدود والمشاريع المتخصصة.</p>
+            <p data-ar="إنشاء وصيانة محطات الطاقة، المياه، الصرف الصحي، الاتصالات، المرافق البحرية، الموانئ، السدود والمشاريع المتخصصة."
+               data-en="Construction and maintenance of power stations, water stations, sewage plants, telecom facilities, ports, marine facilities, dams, and specialized projects.">
+              إنشاء وصيانة محطات الطاقة، المياه، الصرف الصحي، الاتصالات، المرافق البحرية، الموانئ، السدود والمشاريع المتخصصة.
+            </p>
           </div>
 
           <div class="card service-card">
             <div class="icon-box">⚙</div>
             <h3 data-ar="الأعمال الكهروميكانيكية والسلامة" data-en="Electromechanical & Safety Works">الأعمال الكهروميكانيكية والسلامة</h3>
-            <p data-ar="تركيب وصيانة أنظمة الكهرباء، التكييف، الإطفاء، الإنذار، المصاعد، الأبواب الأوتوماتيكية، الطاقة الشمسية، وأنظمة السلامة." data-en="Installation and maintenance of electrical systems, HVAC, fire alarm and firefighting systems, elevators, automatic doors, solar energy, and safety systems.">تركيب وصيانة أنظمة الكهرباء، التكييف، الإطفاء، الإنذار، المصاعد، الأبواب الأوتوماتيكية، الطاقة الشمسية، وأنظمة السلامة.</p>
+            <p data-ar="تركيب وصيانة أنظمة الكهرباء، التكييف، الإطفاء، الإنذار، المصاعد، الأبواب الأوتوماتيكية، الطاقة الشمسية، وأنظمة السلامة."
+               data-en="Installation and maintenance of electrical systems, HVAC, fire alarm and firefighting systems, elevators, automatic doors, solar energy, and safety systems.">
+              تركيب وصيانة أنظمة الكهرباء، التكييف، الإطفاء، الإنذار، المصاعد، الأبواب الأوتوماتيكية، الطاقة الشمسية، وأنظمة السلامة.
+            </p>
           </div>
 
           <div class="card service-card">
             <div class="icon-box">◫</div>
             <h3 data-ar="التشطيبات والديكور" data-en="Finishing & Decoration">التشطيبات والديكور</h3>
-            <p data-ar="أعمال الدهانات، السيراميك، الرخام، الحجر، الزجاج، الأسقف، العوازل، الديكورات، المطابخ، الأبواب والنوافذ." data-en="Painting, ceramic, marble, stone, glass, ceilings, insulation, decoration works, kitchens, doors and windows.">أعمال الدهانات، السيراميك، الرخام، الحجر، الزجاج، الأسقف، العوازل، الديكورات، المطابخ، الأبواب والنوافذ.</p>
+            <p data-ar="أعمال الدهانات، السيراميك، الرخام، الحجر، الزجاج، الأسقف، العوازل، الديكورات، المطابخ، الأبواب والنوافذ."
+               data-en="Painting, ceramic, marble, stone, glass, ceilings, insulation, decoration works, kitchens, doors and windows.">
+              أعمال الدهانات، السيراميك، الرخام، الحجر، الزجاج، الأسقف، العوازل، الديكورات، المطابخ، الأبواب والنوافذ.
+            </p>
           </div>
 
           <div class="card service-card">
             <div class="icon-box">▲</div>
             <h3 data-ar="الأعمال المتخصصة والمعدات" data-en="Specialized Works & Equipment">الأعمال المتخصصة والمعدات</h3>
-            <p data-ar="تركيب السقالات، حمامات السباحة، أنظمة الرفوف، الوحدات مسبقة الشد، وتأجير معدات التشييد والبناء مع مشغل." data-en="Scaffolding, swimming pools, storage rack systems, pre-stressed units, and construction equipment rental with operator.">تركيب السقالات، حمامات السباحة، أنظمة الرفوف، الوحدات مسبقة الشد، وتأجير معدات التشييد والبناء مع مشغل.</p>
+            <p data-ar="تركيب السقالات، حمامات السباحة، أنظمة الرفوف، الوحدات مسبقة الشد، وتأجير معدات التشييد والبناء مع مشغل."
+               data-en="Scaffolding, swimming pools, storage rack systems, pre-stressed units, and construction equipment rental with operator.">
+              تركيب السقالات، حمامات السباحة، أنظمة الرفوف، الوحدات مسبقة الشد، وتأجير معدات التشييد والبناء مع مشغل.
+            </p>
           </div>
 
           <div class="card service-card">
             <div class="icon-box">⌂</div>
             <h3 data-ar="التطوير العقاري" data-en="Real Estate Development">التطوير العقاري</h3>
-            <p data-ar="شراء وبيع وتقسيم الأراضي والعقارات، التطوير العقاري للمباني السكنية والتجارية، وإدارة المخازن ذاتية التخزين." data-en="Buying, selling and subdividing lands and properties, development of residential and commercial buildings, and self-storage management.">شراء وبيع وتقسيم الأراضي والعقارات، التطوير العقاري للمباني السكنية والتجارية، وإدارة المخازن ذاتية التخزين.</p>
+            <p data-ar="شراء وبيع وتقسيم الأراضي والعقارات، التطوير العقاري للمباني السكنية والتجارية، وإدارة المخازن ذاتية التخزين."
+               data-en="Buying, selling and subdividing lands and properties, development of residential and commercial buildings, and self-storage management.">
+              شراء وبيع وتقسيم الأراضي والعقارات، التطوير العقاري للمباني السكنية والتجارية، وإدارة المخازن ذاتية التخزين.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section bg-white" id="sectors">
+    <section class="section bg-white" id="projects">
+      <div class="container">
+        <div class="section-heading">
+          <h2 data-ar="أنواع المشاريع التي نخدمها" data-en="Project Types We Serve">أنواع المشاريع التي نخدمها</h2>
+          <p data-ar="نخدم مشاريع الأفراد والقطاع الخاص والجهات المختلفة ضمن نطاق المقاولات العامة والبنية التحتية والتطوير العقاري."
+             data-en="We serve individual, private sector, and institutional projects across general contracting, infrastructure, and real estate development fields.">
+            نخدم مشاريع الأفراد والقطاع الخاص والجهات المختلفة ضمن نطاق المقاولات العامة والبنية التحتية والتطوير العقاري.
+          </p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="services-grid">
+          <div class="card service-card">
+            <div class="icon-box">⌂</div>
+            <h3 data-ar="الفلل السكنية" data-en="Residential Villas">الفلل السكنية</h3>
+            <p data-ar="تنفيذ وترميم وتشطيب الفلل السكنية وفق احتياج العميل والمواصفات المطلوبة."
+               data-en="Execution, renovation, and finishing of residential villas according to client requirements.">
+              تنفيذ وترميم وتشطيب الفلل السكنية وفق احتياج العميل والمواصفات المطلوبة.
+            </p>
+          </div>
+
+          <div class="card service-card">
+            <div class="icon-box">▦</div>
+            <h3 data-ar="المباني التجارية" data-en="Commercial Buildings">المباني التجارية</h3>
+            <p data-ar="تنفيذ الأعمال الإنشائية والتشطيبات للمكاتب والمعارض والمباني التجارية."
+               data-en="Construction and finishing works for offices, showrooms, and commercial buildings.">
+              تنفيذ الأعمال الإنشائية والتشطيبات للمكاتب والمعارض والمباني التجارية.
+            </p>
+          </div>
+
+          <div class="card service-card">
+            <div class="icon-box">◫</div>
+            <h3 data-ar="أعمال الترميم" data-en="Renovation Works">أعمال الترميم</h3>
+            <p data-ar="معالجة وترميم المباني القائمة وتحسين حالتها التشغيلية والإنشائية."
+               data-en="Restoration and improvement of existing buildings and their operational and structural condition.">
+              معالجة وترميم المباني القائمة وتحسين حالتها التشغيلية والإنشائية.
+            </p>
+          </div>
+
+          <div class="card service-card">
+            <div class="icon-box">⌁</div>
+            <h3 data-ar="مشاريع البنية التحتية" data-en="Infrastructure Projects">مشاريع البنية التحتية</h3>
+            <p data-ar="تنفيذ أعمال الطرق والأرصفة والتمديدات والمرافق حسب نطاق المشروع."
+               data-en="Execution of roads, sidewalks, extensions, and utility works according to project scope.">
+              تنفيذ أعمال الطرق والأرصفة والتمديدات والمرافق حسب نطاق المشروع.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="sectors">
       <div class="container">
         <div class="section-heading">
           <h2 data-ar="مجالات العمل" data-en="Work Fields">مجالات العمل</h2>
-          <p data-ar="نخدم قطاعات متنوعة ضمن نطاق المقاولات العامة والبنية التحتية والتطوير العقاري." data-en="We serve various sectors across general contracting, infrastructure, and real estate development.">
+          <p data-ar="نخدم قطاعات متنوعة ضمن نطاق المقاولات العامة والبنية التحتية والتطوير العقاري."
+             data-en="We serve various sectors across general contracting, infrastructure, and real estate development.">
             نخدم قطاعات متنوعة ضمن نطاق المقاولات العامة والبنية التحتية والتطوير العقاري.
           </p>
           <div class="section-line"></div>
@@ -1147,13 +1375,56 @@
       </div>
     </section>
 
+    <section class="section highlight-section" id="process">
+      <div class="container">
+        <div class="section-heading">
+          <h2 data-ar="آلية العمل" data-en="Work Process">آلية العمل</h2>
+          <p data-ar="نتبع خطوات واضحة من استقبال الطلب وحتى التسليم لضمان وضوح نطاق العمل وجودة التنفيذ."
+             data-en="We follow clear steps from request intake to delivery to ensure scope clarity and execution quality.">
+            نتبع خطوات واضحة من استقبال الطلب وحتى التسليم لضمان وضوح نطاق العمل وجودة التنفيذ.
+          </p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="why-grid">
+          <div class="card process-card">
+            <div class="number-box">1</div>
+            <h3 data-ar="استقبال الطلب" data-en="Request Review">استقبال الطلب</h3>
+            <p data-ar="نستقبل بيانات المشروع ونفهم طبيعة الاحتياج ونطاق العمل المطلوب."
+               data-en="We receive project details and understand the required scope of work.">
+              نستقبل بيانات المشروع ونفهم طبيعة الاحتياج ونطاق العمل المطلوب.
+            </p>
+          </div>
+
+          <div class="card process-card">
+            <div class="number-box">2</div>
+            <h3 data-ar="دراسة الموقع والمتطلبات" data-en="Site & Requirement Study">دراسة الموقع والمتطلبات</h3>
+            <p data-ar="نراجع متطلبات التنفيذ ونحدد الموارد والمدة والتكاليف التقديرية."
+               data-en="We review execution requirements and define resources, timeline, and estimated costs.">
+              نراجع متطلبات التنفيذ ونحدد الموارد والمدة والتكاليف التقديرية.
+            </p>
+          </div>
+
+          <div class="card process-card">
+            <div class="number-box">3</div>
+            <h3 data-ar="التنفيذ والمتابعة" data-en="Execution & Follow-up">التنفيذ والمتابعة</h3>
+            <p data-ar="يتم تنفيذ الأعمال وفق خطة واضحة مع متابعة الجودة والسلامة حتى التسليم."
+               data-en="Works are executed according to a clear plan with quality and safety follow-up until delivery.">
+              يتم تنفيذ الأعمال وفق خطة واضحة مع متابعة الجودة والسلامة حتى التسليم.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="why">
       <div class="container">
         <div class="section-heading">
           <h2 data-ar="لماذا مؤسسة معتز الشمري؟" data-en="Why Mutaz Alshammari Contracting?">لماذا مؤسسة معتز الشمري؟</h2>
-          <p data-ar="نحرص على تقديم تجربة مهنية واضحة من بداية المشروع حتى التسليم، عبر كفاءات سعودية مؤهلة تلتزم بالجودة والاحترافية في جميع مراحل التنفيذ." data-en="We focus on providing a clear professional experience from project start to delivery, through qualified Saudi talents committed to quality and professionalism across all stages of execution.">
-  نحرص على تقديم تجربة مهنية واضحة من بداية المشروع حتى التسليم، عبر كفاءات سعودية مؤهلة تلتزم بالجودة والاحترافية في جميع مراحل التنفيذ.
-</p>
+          <p data-ar="نحرص على تقديم تجربة مهنية واضحة من بداية المشروع حتى التسليم، عبر كفاءات سعودية مؤهلة تلتزم بالجودة والاحترافية في جميع مراحل التنفيذ."
+             data-en="We focus on providing a clear professional experience from project start to delivery, through qualified Saudi talents committed to quality and professionalism across all stages of execution.">
+            نحرص على تقديم تجربة مهنية واضحة من بداية المشروع حتى التسليم، عبر كفاءات سعودية مؤهلة تلتزم بالجودة والاحترافية في جميع مراحل التنفيذ.
+          </p>
           <div class="section-line"></div>
         </div>
 
@@ -1161,7 +1432,8 @@
           <div class="card">
             <div class="number-box">1</div>
             <h3 data-ar="نطاق خدمات واسع" data-en="Wide Service Scope">نطاق خدمات واسع</h3>
-            <p data-ar="تغطي المؤسسة أنشطة متعددة تشمل المباني، الطرق، الشبكات، المحطات، التشطيبات والتطوير العقاري." data-en="The establishment covers multiple activities including buildings, roads, networks, stations, finishing works, and real estate development.">
+            <p data-ar="تغطي المؤسسة أنشطة متعددة تشمل المباني، الطرق، الشبكات، المحطات، التشطيبات والتطوير العقاري."
+               data-en="The establishment covers multiple activities including buildings, roads, networks, stations, finishing works, and real estate development.">
               تغطي المؤسسة أنشطة متعددة تشمل المباني، الطرق، الشبكات، المحطات، التشطيبات والتطوير العقاري.
             </p>
           </div>
@@ -1169,7 +1441,8 @@
           <div class="card">
             <div class="number-box">2</div>
             <h3 data-ar="التزام بالجودة والسلامة" data-en="Quality & Safety Commitment">التزام بالجودة والسلامة</h3>
-            <p data-ar="نعتمد على تنفيذ منظم يراعي جودة الأعمال ومتطلبات السلامة في مواقع العمل." data-en="We follow organized execution practices that consider work quality and site safety requirements.">
+            <p data-ar="نعتمد على تنفيذ منظم يراعي جودة الأعمال ومتطلبات السلامة في مواقع العمل."
+               data-en="We follow organized execution practices that consider work quality and site safety requirements.">
               نعتمد على تنفيذ منظم يراعي جودة الأعمال ومتطلبات السلامة في مواقع العمل.
             </p>
           </div>
@@ -1177,8 +1450,56 @@
           <div class="card">
             <div class="number-box">3</div>
             <h3 data-ar="مرونة في التنفيذ" data-en="Execution Flexibility">مرونة في التنفيذ</h3>
-            <p data-ar="القدرة على التعامل مع احتياجات متنوعة للمشاريع السكنية، التجارية، الحكومية، والبنية التحتية." data-en="Ability to handle various project needs across residential, commercial, governmental, and infrastructure fields.">
+            <p data-ar="القدرة على التعامل مع احتياجات متنوعة للمشاريع السكنية، التجارية، الحكومية، والبنية التحتية."
+               data-en="Ability to handle various project needs across residential, commercial, governmental, and infrastructure fields.">
               القدرة على التعامل مع احتياجات متنوعة للمشاريع السكنية، التجارية، الحكومية، والبنية التحتية.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white" id="faq">
+      <div class="container">
+        <div class="section-heading">
+          <h2 data-ar="الأسئلة الشائعة" data-en="Frequently Asked Questions">الأسئلة الشائعة</h2>
+          <p data-ar="إجابات مختصرة على أكثر الأسئلة المتعلقة بخدمات المقاولات والتواصل."
+             data-en="Brief answers to common questions about contracting services and communication.">
+            إجابات مختصرة على أكثر الأسئلة المتعلقة بخدمات المقاولات والتواصل.
+          </p>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="faq-grid">
+          <div class="card faq-card">
+            <h3 data-ar="هل تقدمون زيارة ميدانية؟" data-en="Do you provide site visits?">هل تقدمون زيارة ميدانية؟</h3>
+            <p data-ar="نعم، يتم تحديد الزيارة حسب نوع المشروع وموقعه ونطاق العمل المطلوب."
+               data-en="Yes, site visits are arranged based on project type, location, and scope of work.">
+              نعم، يتم تحديد الزيارة حسب نوع المشروع وموقعه ونطاق العمل المطلوب.
+            </p>
+          </div>
+
+          <div class="card faq-card">
+            <h3 data-ar="هل تقدمون عرض سعر؟" data-en="Do you provide quotations?">هل تقدمون عرض سعر؟</h3>
+            <p data-ar="نعم، بعد فهم المتطلبات ودراسة نطاق العمل يتم إعداد عرض سعر مناسب."
+               data-en="Yes, after understanding the requirements and studying the scope, a suitable quotation is prepared.">
+              نعم، بعد فهم المتطلبات ودراسة نطاق العمل يتم إعداد عرض سعر مناسب.
+            </p>
+          </div>
+
+          <div class="card faq-card">
+            <h3 data-ar="هل تعملون داخل جميع مناطق المملكة؟" data-en="Do you work across Saudi Arabia?">هل تعملون داخل جميع مناطق المملكة؟</h3>
+            <p data-ar="يتم دراسة كل مشروع حسب موقعه وطبيعته وإمكانية تنفيذه."
+               data-en="Each project is reviewed according to its location, nature, and execution feasibility.">
+              يتم دراسة كل مشروع حسب موقعه وطبيعته وإمكانية تنفيذه.
+            </p>
+          </div>
+
+          <div class="card faq-card">
+            <h3 data-ar="كيف أبدأ طلب الخدمة؟" data-en="How can I start?">كيف أبدأ طلب الخدمة؟</h3>
+            <p data-ar="يمكنك التواصل عبر واتساب أو الاتصال المباشر وتزويدنا ببيانات المشروع."
+               data-en="You can contact us via WhatsApp or phone and share your project details.">
+              يمكنك التواصل عبر واتساب أو الاتصال المباشر وتزويدنا ببيانات المشروع.
             </p>
           </div>
         </div>
@@ -1189,7 +1510,8 @@
       <div class="container">
         <div class="cta-box">
           <h2 data-ar="هل لديك مشروع أو استفسار؟" data-en="Have a project or inquiry?">هل لديك مشروع أو استفسار؟</h2>
-          <p data-ar="تواصل معنا الآن لمناقشة احتياجك وتحديد نطاق العمل المناسب." data-en="Contact us now to discuss your requirements and define the suitable scope of work.">
+          <p data-ar="تواصل معنا الآن لمناقشة احتياجك وتحديد نطاق العمل المناسب."
+             data-en="Contact us now to discuss your requirements and define the suitable scope of work.">
             تواصل معنا الآن لمناقشة احتياجك وتحديد نطاق العمل المناسب.
           </p>
 
@@ -1200,91 +1522,96 @@
         </div>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">
-          <img class="footer-logo" src="favicon.webp" alt="Mutaz Alshammari Contracting Logo" onerror="this.src='favicon.webp'">
-          <div>
-            <h3 data-ar="مؤسسة معتز الشمري" data-en="Mutaz Alshammari">مؤسسة معتز الشمري</h3>
-            <div class="gold-text" data-ar="للمقاولات" data-en="Contracting">للمقاولات</div>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">
+            <img class="footer-logo" src="favicon.webp" alt="Mutaz Alshammari Contracting Logo" onerror="this.src='favicon.webp'">
+            <div>
+              <h3 data-ar="مؤسسة معتز الشمري" data-en="Mutaz Alshammari">مؤسسة معتز الشمري</h3>
+              <div class="gold-text" data-ar="للمقاولات" data-en="Contracting">للمقاولات</div>
+            </div>
+          </div>
+
+          <p data-ar="مؤسسة سعودية متخصصة في المقاولات العامة، الإنشاءات، البنية التحتية، التشطيبات، والتطوير العقاري."
+             data-en="A Saudi establishment specialized in general contracting, construction, infrastructure, finishing works, and real estate development.">
+            مؤسسة سعودية متخصصة في المقاولات العامة، الإنشاءات، البنية التحتية، التشطيبات، والتطوير العقاري.
+          </p>
+
+          <p class="gold-text" style="margin-top:14px;" data-ar="مؤسسة معتز سعود خلف الشمري" data-en="MUTAZ SAUD KH ALSHAMMARI Establishment">مؤسسة معتز سعود خلف الشمري</p>
+          <p class="gold-text" dir="ltr" data-ar="الرقم الوطني الموحد: 7054234989" data-en="National Number: 7054234989">الرقم الوطني الموحد: 7054234989</p>
+        </div>
+
+        <div>
+          <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
+          <ul>
+            <li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
+            <li><a href="#about" data-ar="من نحن" data-en="About">من نحن</a></li>
+            <li><a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a></li>
+            <li><a href="#projects" data-ar="المشاريع" data-en="Projects">المشاريع</a></li>
+            <li><a href="#sectors" data-ar="مجالات العمل" data-en="Work Fields">مجالات العمل</a></li>
+            <li><a href="#process" data-ar="آلية العمل" data-en="Process">آلية العمل</a></li>
+            <li><a href="#why" data-ar="لماذا نحن" data-en="Why Us">لماذا نحن</a></li>
+            <li><a href="#faq" data-ar="الأسئلة الشائعة" data-en="FAQ">الأسئلة الشائعة</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 data-ar="تواصل معنا" data-en="Contact">تواصل معنا</h4>
+          <ul>
+            <li><a href="tel:+966503343313" dir="ltr">+966503343313</a></li>
+            <li><a href="mailto:info@mutaz.sa" dir="ltr">info@mutaz.sa</a></li>
+            <li><a class="whatsapp-link" href="#" target="_blank" rel="noreferrer">WhatsApp</a></li>
+            <li data-ar="المملكة العربية السعودية" data-en="Saudi Arabia">المملكة العربية السعودية</li>
+          </ul>
+
+          <h4 style="margin-top:28px;" data-ar="تابعنا" data-en="Follow Us">تابعنا</h4>
+
+          <div class="social-links">
+            <a href="https://www.instagram.com/mutaz_ksa" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <span>◎</span>
+              mutaz_ksa
+            </a>
+
+            <a href="https://www.tiktok.com/@mutaz_ksa" target="_blank" rel="noreferrer" aria-label="TikTok">
+              <span>♪</span>
+              mutaz_ksa
+            </a>
+
+            <a href="https://x.com/mutaz_ksa" target="_blank" rel="noreferrer" aria-label="X">
+              <span>𝕏</span>
+              mutaz_ksa
+            </a>
+
+            <a href="#" aria-label="LinkedIn" onclick="return false;" class="disabled-social">
+              <span>in</span>
+              LinkedIn
+            </a>
           </div>
         </div>
+      </div>
 
-        <p data-ar="مؤسسة سعودية متخصصة في المقاولات العامة، الإنشاءات، البنية التحتية، التشطيبات، والتطوير العقاري." data-en="A Saudi establishment specialized in general contracting, construction, infrastructure, finishing works, and real estate development.">
-          مؤسسة سعودية متخصصة في المقاولات العامة، الإنشاءات، البنية التحتية، التشطيبات، والتطوير العقاري.
+      <div class="footer-bottom">
+        <p data-ar="جميع الحقوق محفوظة © 2026" data-en="All rights reserved © 2026">
+          جميع الحقوق محفوظة © 2026
         </p>
 
-        <p class="gold-text" style="margin-top:14px;" data-ar="مؤسسة معتز سعود خلف الشمري" data-en="MUTAZ SAUD KH ALSHAMMARI Establishment">مؤسسة معتز سعود خلف الشمري</p>
-        <p class="gold-text" dir="ltr" data-ar="الرقم الوطني الموحد: 7054234989" data-en="National Number: 7054234989">الرقم الوطني الموحد: 7054234989</p>
-      </div>
-
-      <div>
-        <h4 data-ar="روابط سريعة" data-en="Quick Links">روابط سريعة</h4>
-        <ul>
-          <li><a href="#home" data-ar="الرئيسية" data-en="Home">الرئيسية</a></li>
-          <li><a href="#about" data-ar="من نحن" data-en="About">من نحن</a></li>
-          <li><a href="#services" data-ar="خدماتنا" data-en="Services">خدماتنا</a></li>
-          <li><a href="#sectors" data-ar="مجالات العمل" data-en="Work Fields">مجالات العمل</a></li>
-          <li><a href="#why" data-ar="لماذا نحن" data-en="Why Us">لماذا نحن</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 data-ar="تواصل معنا" data-en="Contact">تواصل معنا</h4>
-        <ul>
-          <li><a href="tel:+966503343313" dir="ltr">+966503343313</a></li>
-          <li><a href="mailto:info@mutaz.sa" dir="ltr">info@mutaz.sa</a></li>
-          <li><a class="whatsapp-link" href="#" target="_blank" rel="noreferrer">WhatsApp</a></li>
-          <li data-ar="المملكة العربية السعودية" data-en="Saudi Arabia">المملكة العربية السعودية</li>
-        </ul>
-
-        <h4 style="margin-top:28px;" data-ar="تابعنا" data-en="Follow Us">تابعنا</h4>
-
-        <div class="social-links">
-          <a href="https://www.instagram.com/mutaz_ksa" target="_blank" rel="noreferrer" aria-label="Instagram">
-            <span>◎</span>
-            mutaz_ksa
-          </a>
-
-          <a href="https://www.tiktok.com/@mutaz_ksa" target="_blank" rel="noreferrer" aria-label="TikTok">
-            <span>♪</span>
-            mutaz_ksa
-          </a>
-
-          <a href="https://x.com/mutaz_ksa" target="_blank" rel="noreferrer" aria-label="X">
-            <span>𝕏</span>
-            mutaz_ksa
-          </a>
-
-          <a href="#" aria-label="LinkedIn" onclick="return false;" class="disabled-social">
-            <span>in</span>
-            LinkedIn
-          </a>
-        </div>
+        <a href="https://ecode.sa" target="_blank" rel="noreferrer" class="powered-by-ecode" aria-label="Powered by eCode">
+          <img src="Powered_by_eCode.webp" alt="Powered by eCode">
+        </a>
       </div>
     </div>
-
-    <div class="footer-bottom">
-  <p data-ar="جميع الحقوق محفوظة © 2026" data-en="All rights reserved © 2026">
-    جميع الحقوق محفوظة © 2026
-  </p>
-
-  <a href="https://ecode.sa" target="_blank" rel="noreferrer" class="powered-by-ecode" aria-label="Powered by eCode">
-    <img src="Powered_by_eCode.webp" alt="Powered by eCode">
-  </a>
-</div>
-  </div>
-</footer>
+  </footer>
 
   <a class="floating-whatsapp whatsapp-link" href="#" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-  <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
-    <path fill="currentColor" d="M16.04 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.26.59 4.47 1.72 6.41L3.12 29.2l6.96-1.82c1.87 1.02 3.98 1.56 6.12 1.56h.01c7.06 0 12.8-5.74 12.8-12.8 0-3.42-1.33-6.64-3.75-9.06A12.72 12.72 0 0 0 16.04 3.2Zm.01 23.58h-.01c-1.91 0-3.78-.51-5.42-1.48l-.39-.23-4.13 1.08 1.1-4.02-.26-.41A10.54 10.54 0 0 1 5.4 16c0-5.86 4.77-10.63 10.64-10.63 2.84 0 5.51 1.11 7.52 3.12a10.55 10.55 0 0 1 3.12 7.51c0 5.86-4.77 10.78-10.63 10.78Zm5.84-7.96c-.32-.16-1.9-.94-2.19-1.04-.29-.11-.5-.16-.71.16-.21.32-.82 1.04-1.01 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.58-1.59-.95-.85-1.59-1.9-1.78-2.22-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.71-.97-2.34-.26-.61-.52-.53-.71-.54h-.61c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66 0 1.57 1.15 3.09 1.31 3.3.16.21 2.27 3.46 5.49 4.85.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37Z"/>
-  </svg>
-</a>
+    <svg viewBox="0 0 32 32" width="32" height="32" aria-hidden="true">
+      <path fill="currentColor" d="M16.04 3.2c-7.06 0-12.8 5.74-12.8 12.8 0 2.26.59 4.47 1.72 6.41L3.12 29.2l6.96-1.82c1.87 1.02 3.98 1.56 6.12 1.56h.01c7.06 0 12.8-5.74 12.8-12.8 0-3.42-1.33-6.64-3.75-9.06A12.72 12.72 0 0 0 16.04 3.2Zm.01 23.58h-.01c-1.91 0-3.78-.51-5.42-1.48l-.39-.23-4.13 1.08 1.1-4.02-.26-.41A10.54 10.54 0 0 1 5.4 16c0-5.86 4.77-10.63 10.64-10.63 2.84 0 5.51 1.11 7.52 3.12a10.55 10.55 0 0 1 3.12 7.51c0 5.86-4.77 10.78-10.63 10.78Zm5.84-7.96c-.32-.16-1.9-.94-2.19-1.04-.29-.11-.5-.16-.71.16-.21.32-.82 1.04-1.01 1.25-.18.21-.37.24-.69.08-.32-.16-1.35-.5-2.58-1.59-.95-.85-1.59-1.9-1.78-2.22-.18-.32-.02-.49.14-.65.14-.14.32-.37.48-.55.16-.18.21-.32.32-.53.11-.21.05-.4-.03-.56-.08-.16-.71-1.71-.97-2.34-.26-.61-.52-.53-.71-.54h-.61c-.21 0-.56.08-.85.4-.29.32-1.12 1.09-1.12 2.66 0 1.57 1.15 3.09 1.31 3.3.16.21 2.27 3.46 5.49 4.85.77.33 1.37.53 1.84.68.77.24 1.47.21 2.02.13.62-.09 1.9-.78 2.17-1.53.27-.75.27-1.39.19-1.53-.08-.13-.29-.21-.61-.37Z"/>
+    </svg>
+  </a>
 
   <script>
     const WHATSAPP_NUMBER = "966503343313";
@@ -1354,26 +1681,31 @@
       menuBtn.textContent = "☰";
     });
 
-        setLanguage("ar");
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker.register("service-worker.js")
-      .then((registration) => {
-        registration.addEventListener('updatefound', () => {
-          const newWorker = registration.installing;
-          newWorker.addEventListener('statechange', () => {
-            if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-              window.location.reload(); 
-            }
+    setLanguage("ar");
+
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js")
+          .then((registration) => {
+            registration.addEventListener("updatefound", () => {
+              const newWorker = registration.installing;
+
+              if (!newWorker) return;
+
+              newWorker.addEventListener("statechange", () => {
+                if (newWorker.state === "installed" && navigator.serviceWorker.controller) {
+                  window.location.reload();
+                }
+              });
+            });
+
+            console.log("Service Worker registered");
+          })
+          .catch((error) => {
+            console.log("Registration failed:", error);
           });
-        });
-        console.log("Service Worker registered");
-      })
-      .catch((error) => {
-        console.log("Registration failed:", error);
       });
-  });
-}
+    }
   </script>
 </body>
 </html>
