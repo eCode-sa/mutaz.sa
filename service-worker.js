@@ -1,16 +1,19 @@
-const CACHE_NAME = "mutaz-sa-cache-v3"; // غير هذا الرقم (v3, v4..) في كل مرة تقوم فيها بتحديث الموقع
+const CACHE_NAME = "mutaz-sa-cache-v4";
 
+// الملفات الأساسية التي نحتاج تخزينها
 const urlsToCache = [
   "/",
   "/index.html",
   "/favicon.webp",
   "/mutazsk.webp",
+  "/Powered_by_eCode.webp",
   "/manifest.json"
 ];
 
-// 1. تثبيت السيرفر ووركر وحفظ الملفات
+// تثبيت Service Worker وتخزين الملفات الأساسية
 self.addEventListener("install", event => {
-  self.skipWaiting(); // إجبار المتصفح على التحديث فوراً
+  self.skipWaiting();
+
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => {
       return cache.addAll(urlsToCache);
@@ -18,27 +21,73 @@ self.addEventListener("install", event => {
   );
 });
 
-// 2. تفعيل السيرفر ووركر وحذف الكاش القديم (هذا هو الحل السحري لمشكلتك)
+// تفعيل Service Worker وحذف أي كاش قديم
 self.addEventListener("activate", event => {
   event.waitUntil(
-    caches.keys().then(cacheNames => {
-      return Promise.all(
-        cacheNames.map(cache => {
-          if (cache !== CACHE_NAME) {
-            console.log("تم حذف الكاش القديم:", cache);
-            return caches.delete(cache);
-          }
-        })
-      );
-    }).then(() => self.clients.claim())
+    caches.keys()
+      .then(cacheNames => {
+        return Promise.all(
+          cacheNames.map(cacheName => {
+            if (cacheName !== CACHE_NAME) {
+              console.log("Old cache deleted:", cacheName);
+              return caches.delete(cacheName);
+            }
+          })
+        );
+      })
+      .then(() => self.clients.claim())
   );
 });
 
-// 3. جلب الملفات (يقرأ من الكاش الجديد، وإذا لم يجده يطلبه من الإنترنت)
+// استراتيجية الجلب
+// صفحات HTML: يجلب من الإنترنت أولاً حتى تظهر التحديثات مباشرة
+// الصور والملفات الأخرى: يقرأ من الكاش أولاً لتحسين السرعة
 self.addEventListener("fetch", event => {
+  const request = event.request;
+
+  if (request.method !== "GET") {
+    return;
+  }
+
+  const isHTMLRequest =
+    request.headers.get("accept") &&
+    request.headers.get("accept").includes("text/html");
+
+  if (isHTMLRequest) {
+    event.respondWith(
+      fetch(request)
+        .then(networkResponse => {
+          return caches.open(CACHE_NAME).then(cache => {
+            cache.put(request, networkResponse.clone());
+            return networkResponse;
+          });
+        })
+        .catch(() => {
+          return caches.match(request).then(cachedResponse => {
+            return cachedResponse || caches.match("/index.html");
+          });
+        })
+    );
+
+    return;
+  }
+
   event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
+    caches.match(request).then(cachedResponse => {
+      if (cachedResponse) {
+        return cachedResponse;
+      }
+
+      return fetch(request)
+        .then(networkResponse => {
+          return caches.open(CACHE_NAME).then(cache => {
+            cache.put(request, networkResponse.clone());
+            return networkResponse;
+          });
+        })
+        .catch(() => {
+          return caches.match("/index.html");
+        });
     })
   );
 });
