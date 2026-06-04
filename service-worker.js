@@ -1,4 +1,4 @@
-const CACHE_NAME = "mutaz-sa-cache-v4";
+const CACHE_NAME = "mutaz-sa-cache-v5";
 
 // الملفات الأساسية التي نحتاج تخزينها
 const urlsToCache = [
