@@ -6,7 +6,6 @@ const urlsToCache = [
   "/index.html",
   "/favicon.webp",
   "/mutazsk.webp",
-  "/Powered_by_eCode.webp",
   "/manifest.json"
 ];
 
